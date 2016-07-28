@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>幫Blog 裝上Syntax Highlight</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/tomorrow-night-bright.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Ioan Blog</a>
+            </div>
+ 
+
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="../index.html"><i class="fa fa-fw fa-dashboard"></i>Index</a>
+                    </li>
+                    <li>
+                        <a href="../AboutMe.html"><i class="fa fa-fw fa-edit"></i> About Me</a>
+                    </li>
+                    <li>
+                        <a href="../Web.html"><i class="fa fa-fw fa-desktop"></i> Web Security</a>
+                    </li>
+                    <li>
+                        <a href="../Reverse.html"><i class="fa fa-fw fa-wrench"></i> Reverse</a>
+                    </li>
+                    <li>
+                        <a href="../Translate.html"><i class="fa fa-fw fa-file"></i> Translate</a>
+                    </li>
+                    <li  class="active">
+                        <a href="../Note.html"><i class="fa fa-fw fa-table"></i> Note</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="index.html">Blog</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-fw fa-table"></i>  <a href="../Note.html">Note</a>
+                            </li>
+                            <li class="active">
+                                幫Blog 裝上Syntax Highlight
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            幫Blog 裝上Syntax Highlight<br> 
+                            <small>用highlight.js 為例</small>
+                        </h1>
+                        <p class="lead">
+                        因為這邊是用 Bootstrap <del> 硬幹 </del><br>
+                        在Google 過後, 決定用 <a href="https://highlightjs.org/"> highlight.js </a><br>
+                        <del> 才不會說是因為看起來比較簡單 </del><br>
+                        <br>
+                        稍微比過速度後, 覺得<a href="https://cdnjs.com/"> cdnjs.com </a> 好像比較快一點?<br>
+                        這邊提供這Blog 用的CDN 語法<br>
+                        <br>
+                        當然, 如果想放在自己Server 上, 或是其他CDN 當然也是可以
+                        </p>
+                        <!-- CND Example Start-->
+            <pre><code class="html">
+&lt;link rel="stylesheet" type="text/css" href="highlight/styles/monokai.css"&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/monokai-sublime.min.css"&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+            </code></pre>
+                        <!-- CND Example End -->
+                        <p class="lead">
+                        值得注意得是, 要記得放
+                        </p>
+                        <!-- Script Onload Start-->
+<pre>
+<code class="html">
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+
+</code>
+</pre>
+                        <!-- Script Onload End-->
+                        <p class="lead">
+                        不然不會work, 因為我一開始就忘記放 (遮臉) <br>
+                        <br>
+                        之後在body 裡, 準備扔Code 得地方<br>
+                        </p>
+                        <!-- Body code test Start -->
+<pre><code class="html">
+&lt;pre&gt;&lt;code class="語言"&gt;
+&lt;!-- 要扔得Code --&gt;
+&lt;/code>&lt;/pre&gt;
+
+</code></pre>
+                        <!-- Body code test End -->
+                        <p class="lead">
+                        好惹, 就會變成這Blog 這樣, 是不是很簡單呢? XD
+                        </p>
+                        <br> 
+
+                    </div>
+                </div>
+                <!-- /.row -->
+
+ 
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../js/plugins/morris/raphael.min.js"></script>
+    <script src="../js/plugins/morris/morris.min.js"></script>
+    <script src="../js/plugins/morris/morris-data.js"></script>
+
+</body>
+
+</html>
