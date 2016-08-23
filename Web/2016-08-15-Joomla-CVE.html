@@ -143,7 +143,7 @@
                     </div>
                     <div class="col-lg-6">
                     <p class="lead">
-                        在幾個禮拜前我們公開 <a target="_blank" href="https://blog.sucuri.net/2016/07/joomla-wordpress-affected-by-realstatistics-infection-campaign-distributing-randsomware-malware.html">Realstatistics malware campaign</a> 這篇關於 Joomla 網站文章後的幾個禮拜，這種大規模的感染，仍然再不斷勒索跟繼續感染網站用戶。
+                        在幾個禮拜前我們公開 <a target="_blank" href="https://blog.sucuri.net/2016/07/joomla-wordpress-affected-by-realstatistics-infection-campaign-distributing-randsomware-malware.html">Realstatistics malware campaign</a>，這篇關於 Joomla 網站文章後的幾個禮拜，這種大規模的感染，仍然再不斷勒索跟繼續感染網站用戶。
                     </p>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                     </div>
                     <div class="col-lg-6">
                     <p class="lead">
-                        今天我們將提供更多關於新的攻擊思維跟發生原因。
+                        今天我們在這篇stie 將提供更多關於新的攻擊思維跟發生原因。
                     </p>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
                     </div>
                     <div class="col-lg-6">
                     <p class="lead">
-                        最一開始的攻擊兒且很嚴重的exploit 版本是前年的<a target="_blank" href="https://blog.sucuri.net/2015/12/remote-command-execution-vulnerability-in-joomla.html"> Remote Command Execution vulnerability in Joomla</a>。 儘管在幾年已經被修復了，我們直到今天仍然可以看到有人嘗試用我們發布的這個 expoit 版本 來攻擊網頁。現在幾乎大部分的WAF(Web Application Firewall) 都修補掉這個exploit，但也是因為這理由，我們目前仍然可以看到有一些少數還沒修補好的舊 Joomla 版本仍有此漏洞。
+                        最一開始的攻擊且嚴重的exploit 版本是前年的<a target="_blank" href="https://blog.sucuri.net/2015/12/remote-command-execution-vulnerability-in-joomla.html"> Remote Command Execution vulnerability in Joomla</a>。 儘管在幾年已經被修復了，但直到今天，我們仍然可以看到，有人嘗試用我們發布的這個 expoit 來攻擊網頁。雖然現在幾乎大部分的WAF (Web Application Firewall) 都修補（path）掉這個exploit。但也是因為這理由，我們仍然可以看見一些成功攻擊，仍有這個漏洞的舊版 Joomla。
                     </p>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                     </div>
                     <div class="col-lg-6">
                     <p class="lead">
-                        我們發現這版本有新變種的版本<b>filter-search option</b>，但我們目前還沒有公佈。因為這漏洞可以在<b>短時間內獲得大量的主機</b>。
+                        我們發現這版本有新變種的版本 <b>filter-search option</b>，但我們目前還沒有公佈。這是因為這漏洞可以在<b>短時間內獲得大量的主機</b>。
                     </p>
                     </div>
                 </div>
@@ -246,7 +246,7 @@
                     </div>
                     <div class="col-lg-6">
                     <p class="lead">
-                        如果看過這段惡意的data，它一開始是發生在六月，但在七月時我們從來沒有看過這段backdoor。
+                        這段惡意的 payload  ，它最一開始的版本是發生在六月，但在七月前我們沒有看過有人嘗試連接到這 backdoor。
                     </p>
                     </div>
                 </div>
@@ -360,7 +360,7 @@
                     </div>
                     <div class="col-lg-6">
                     <p class="lead">
-                        在這邊我們先encode 一部分得payload，再之後會解密掉全部的payload。
+                        這邊只是一部分加密的payload，再之後我們會解密掉全部的payload。
                     </p>
                     </div>
                 </div>
@@ -396,7 +396,7 @@ $inj_search = '&lt;/head&gt;';
                     </div>
                     <div class="col-lg-6">
                     <p class="lead">
-                        當我們看到這段payload code，我們會發現假的Realstatistics analytics code 已經在我們網站得PHP 樣版裡。
+                        當我們看到這段payload code，我們會發現假的Realstatistics analytics code ，已經 inject 進我們網站的PHP 樣版裡。
                     </p>
                     </div>
                 </div>
@@ -413,7 +413,7 @@ $inj_search = '&lt;/head&gt;';
                     <div class="col-lg-6">
                     <p class="lead">
                         <b>
-                        確認你得Joomla 網站
+                        確認你的Joomla 網站
                         </b>
                     </p>
                     </div>
@@ -428,7 +428,7 @@ $inj_search = '&lt;/head&gt;';
                     </div>
                     <div class="col-lg-6">
                     <p class="lead">
-                        這段payload 只會確認是不是還沒path 過的Joomla，所以趕快確認你的Joolma 有沒有Update。這是一個新版的攻擊思維，所以當你發現你的Joolma 還沒有修補，你應該確認你的WAF (Website Application Firewall)，有沒有此漏洞的相關Patch。
+                        這段 payload 只會攻擊目前還沒修補 path 過的 Joomla，所以趕快 Update 你的 Joolma 。由於這是一個新的攻擊方式，所以如果你發現你的 Joomla 還沒有修補，你應該確認你的WAF (Website Application Firewall)，有沒有此漏洞的相關Patch。
                     </p>
                     </div>
                 </div>
@@ -442,7 +442,7 @@ $inj_search = '&lt;/head&gt;';
                     </div>
                     <div class="col-lg-6">
                     <p class="lead">
-                        我們建議確認你得log 檔理有沒有46.183.219.91 這條來源IP，如果你找到這條requests 有存在你的request 裡面，你應該立即移掉這條request，防止再度被感染。
+                        我們建議確認你得 log 檔理有沒有46.183.219.91 這條來源 IP ，如果你找到這條 requests 有存在你的記錄裡面，你應該立即移掉這條 request ，防止再度被感染。
                     </p>
                     </div>
                 </div>
@@ -466,7 +466,8 @@ $inj_search = '&lt;/head&gt;';
                     <div class="col-lg-12">
                         <h2 class="page-header">Exploit</h2>
                         <p class="lead">
-                        由於聊漏洞，沒有補上Exploit 感覺還是有些怪怪的，所以想了想還是補上</p>
+                        由於聊漏洞，沒有Exploit 感覺還是有些怪怪的<br>
+                        所以想了想還是補上</p>
                         <a  href="https://www.exploit-db.com/exploits/39033/" 
                             class="btn btn-xs btn-primary" role="button" target="_blank">Exploit-db</a> 
                         <a  href="https://www.youtube.com/watch?v=twqYpn1ir4o" 
