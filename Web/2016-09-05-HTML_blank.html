@@ -110,7 +110,7 @@
                             <small> target 的 "_blank" </small>
                         </h1>
                         <p class="lead">
-                            這個問題主要是HTML 裡面的
+                            這個問題主要是HTML 裡面我們常用的
                         </p>
 <pre>
 <code class="html">
@@ -119,33 +119,47 @@
 </code>
 </pre>
                         <p class="lead">
-                        有問題
+                        這邊有點小問題 ＠＠
                         </p>
-                        <br>
                         <p class="lead">
-                        因為當我們新開了一個分頁，就會去調動HTML 本身 API 的 window.opener 詳情請見 <a target="_blank" href="http://www.w3schools.com/jsref/prop_win_opener.asp" rel="noopener noreferrer"> w3m </a>
+                        因為當我們新開了一個分頁，就會去調動HTML 本身 API 的 <font color="#ff0000"> window.opener </font><br>
+                        ( 詳情請見 <a target="_blank" href="http://www.w3schools.com/jsref/prop_win_opener.asp" rel="noopener noreferrer"> w3m </a> )
+                        讓Broser 去Call function 去開一個新的分頁</p><br> 
+
+                        <hr> 
+                        <p class="lead">
+                        以下為使用範例
                         </p>
+
+                        <h2 class="page-header">
+                        a.html
+                        </h2>
+
+
+                        
 
 <pre><code class="html">
 &lt;html&gt;
 &lt;head&gt;&lt;/head&gt;
 &lt;body&lt;
-This is my test page
-&lt;a target="_blank" href="test.html"&gt;Click here&lt;/a&gt;
+    This is my test page 
+    &lt;a target="_blank" href="test.html"&gt;Click here&lt;/a&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 
 </code></pre>
-
+                        <h2 class="page-header">
+                        test.html
+                        </h2>
 <pre><code class="html">
 &lt;html&gt;
 &lt;head&gt;
     &lt;script language="javascript"&gt;
-    window.opener.location = 'https://www.google.com'
+        window.opener.location = 'https://www.google.com'
     &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-This is my second test page
+    This is my second test page
 &lt;/body&gt;
 &lt;/html&gt;
 
