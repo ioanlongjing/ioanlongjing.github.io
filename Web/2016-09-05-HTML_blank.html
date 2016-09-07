@@ -124,11 +124,13 @@
                         <p class="lead">
                         因為當我們 Click 了一個含有 target="_blank" 的一個 tag 後，Browser 就會去調動 HTML 本身 API 的 <font color="#ff0000"> window.opener </font>
                         ( 詳情請見 <a target="_blank" href="http://www.w3schools.com/jsref/prop_win_opener.asp" rel="noopener noreferrer"> w3m </a> )<br>
-                        接著 Browser Call function 後就會去建立一個新的分頁 ( New Tab ) </p><br> 
+                        接著 Browser Call function 後就會去建立一個新的分頁 ( New Tab ) 
+                        </p>
 
                         <p class="lead">
-                        這時如果要連入的網站，是惡意的攻擊者建立的，就可以將Payload 寫在新打開的網站中<br>
-                        在開啟有 Payload 的 Web 後，window.opener 就會強迫原始網頁 reload 成黑客設定好 URL 位置
+                        這時如果要連入的網站，是惡意的攻擊者建立的，就可以將 Payload 寫在新打開的網站中<br>
+                        在開啟有 Payload 的 Web 後，window.opener 就會強迫原始網頁 reload 成黑客設定好 URL 位置，至於這有什麼害處呢？<br> 
+                        目前想到就是可以偽裝成釣魚頁面或是用 CSRF 拿到人家的Cookie、Session或是其他的token。
                         </p>
 
                         <hr> 
@@ -139,7 +141,8 @@
                         </h2>
 
                         <p class="lead">
-                        以下面影片範例來說，a.html 用裡面有個 button 是 _blank 另開新分頁到 test.html，點開後結果 a.html 自己轉跳成google
+                        以下面影片範例來說，a.html 用裡面有個 button 是 _blank 另開新分頁到 test.html<br>
+                        卻發現點開後 a.html 卻自己轉跳成google
                         </p>
 
 
