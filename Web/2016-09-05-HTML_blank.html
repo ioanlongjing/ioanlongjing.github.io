@@ -183,7 +183,27 @@
 
 </code></pre>
 
+                        <p class="lead">
+                        好惹，那最後來聊聊該如何修復好惹<br>
+                        </p>
+                        <p class="lead">
+                        答案是沒辦法修復 (X)
+                        </p>
+                        <p class="lead">
+                        開玩笑的，目前這個問題必須借由網管人員在 Source Code 上加入 <font color="#ff0000"> rel="noopener" </font>，不過似乎 Firefox 會有問題，所以後來是用 <font color="#ff0000"> rel="noopener noreferrer" </font> 來解決這問題</p>
+<pre><code class="html">
+&lt;a target="_blank" href="url" el="noopener noreferrer"&gt; Link &lt;/a&gt;
 
+</code></pre>
+
+                        <p class="lead">
+                        所以之後有需要另外開啟分頁時，要記得把<font color="#ff0000"> window.open( ) </font>清空
+<pre><code class="javascript">
+var newWnd = window.open();
+newWnd.opener = null;
+
+</code></pre>
+                       
 
 
                     </div>
