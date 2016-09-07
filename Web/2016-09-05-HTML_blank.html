@@ -122,13 +122,17 @@
                         這邊有點小問題 ＠＠
                         </p>
                         <p class="lead">
-                        因為當我們新開了一個分頁，就會去調動HTML 本身 API 的 <font color="#ff0000"> window.opener </font><br>
+                        因為當我們Click 了一個含有 target="_blank" 的一個tag 後，Broser 就會去調動HTML 本身 API 的 <font color="#ff0000"> window.opener </font><br>
                         ( 詳情請見 <a target="_blank" href="http://www.w3schools.com/jsref/prop_win_opener.asp" rel="noopener noreferrer"> w3m </a> )
-                        讓Broser 去Call function 去開一個新的分頁</p><br> 
+                        接著讓Broser Call function 就會去開一個新的分頁</p><br> 
+
+                        <p class="lead">
+                        這時惡意的攻擊者就可以將Payload 寫在新打開的網站中，之後window.opener 這段API 就會強迫本來打開這段Code 的原始網頁，reload 成一個新打開的URL 位置
+                        </p>
 
                         <hr> 
                         <p class="lead">
-                        以下為使用範例
+                        以下為使用範例 - <a target="_blank" href="https://youtu.be/BGVmB7_pmdU" el="noopener noreferrer"> 影片Demo </a>
                         </p>
 
                         <h2 class="page-header">
@@ -165,10 +169,12 @@
 
 </code></pre>
 
+
+
+
                     </div>
                 </div>
                 <!-- Page End -->
-
             </div>
             <!-- /.container-fluid -->
 
