@@ -129,6 +129,15 @@
                     </div>
                 </div>
 
+                <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <h2>
+                        Ubuntu 密碼重置
+                    </h2>
+                </div>
+                <div class="col-lg-4"></div>
+                </div>
 
                 <!-- Server Picture 01 -->
                 <div id="page-wrapper">
@@ -230,6 +239,16 @@
                     </div>
                 </div> 
 
+                <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <h2>
+                        MySQL 密碼重置
+                    </h2>
+                </div>
+                <div class="col-lg-4"></div>
+                </div>
+
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
@@ -277,7 +296,7 @@
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            在那行下面加上 skip-grant-tables，:wq 存檔
+                            在那行下面加上<font color="#0000ff"><b> skip-grant-tables</b></font>，:wq 存檔
                         </p>
                     </div>
                 </div> 
@@ -326,7 +345,7 @@ use mysql
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            use mysql 選擇 mysql 這個 DB
+                            選擇 mysql 這個 DB
                         </p>
                     </div>
                 </div> 
@@ -357,7 +376,7 @@ update user set password=PASSWORD("NEW_Password") where user='root';
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            好了之後一樣進去 /etc/mysql/my.cnf 把剛剛加的 skip-grant-tables 刪除，接著wq 出來
+                            好了之後一樣進去<font color="#0000ff"><b> /etc/mysql/my.cnf </b></font>把剛剛加的<font color="#ff0000"><b> skip-grant-tables </b></font>刪除，接著wq 出來
                         </p>
                     </div>
                 </div>             
@@ -374,7 +393,7 @@ sudo service mysql restart
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            一樣 sudo service mysql restart 把Server 重新啟動
+                            一樣把 Service 重新啟動
                         </p>
                     </div>
                 </div>             
