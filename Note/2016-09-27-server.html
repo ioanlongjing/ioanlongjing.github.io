@@ -116,16 +116,16 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            話說前幾天因為朋友忘記密碼，才好好安（<del>嘲</del>）慰（<del>笑</del>）他完，沒幾天就換我了 QAQ<br>
-                            不過這台 Server 因為是內網，而且有點久沒有用的 Server
-                            <br> 而且我密碼都是 20 位以上包含英文大小寫跟特殊符號，所以忘記密碼應該合情合理 （被揍）
+                            &nbsp; 話說前幾天因為朋友忘記密碼，才好好安（<del>嘲</del>）慰（<del>笑</del>）他完，沒幾天就換我了 QAQ<br>
+                            &nbsp; 不過這台 Server 因為是內網，而且有點久沒有用的 Server
+                            <br> &nbsp; 而且我密碼都是 20 位以上包含英文大小寫跟特殊符號，所以忘記密碼應該合情合理 （被揍）
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            好惹，來筆記一下過程好惹
+                            &nbsp; 好惹，來筆記一下過程好惹
                         </p>
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            首先我們先把 Server 重開機
+                            &nbsp; 首先我們先把 Server 重開機
                         </p>
                     </div>
                 </div>
@@ -162,7 +162,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            開機時按 ESC ，等到 GRUB 選單時，按下 e 去編輯 booting 
+                            &nbsp; 開機時按 ESC ，等到 GRUB 選單時，按下 e 去編輯 booting 
                         </p>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            沒意外（?）應該會看到這個 GUN GRUB 的編輯畫面
+                            &nbsp; 沒意外（?）應該會看到這個 GUN GRUB 的編輯畫面
                         </p>
                     </div>
                 </div>         
@@ -189,8 +189,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            接著找到 linux /boot/vmlinuz-***** （可能是其他版本號） 的那一行，再最後面補上 single <br>
-                            加上去，後按下 Ctrl + x 會重開機，接著進到Single Model
+                            &nbsp; 接著找到 linux /boot/vmlinuz-***** （可能是其他版本號） 的那一行，再最後面補上 single <br>
+                            &nbsp; 加上去，後按下 Ctrl + x 會重開機，接著進到Single Model
                         </p>
                     </div>
                 </div>  
@@ -204,7 +204,7 @@
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            等等等等等~~~
+                            &nbsp; 等等等等等~~~
                         </p>
                     </div>
                 </div> 
@@ -218,7 +218,7 @@
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            接著發現自己變成了 root 
+                            &nbsp; 接著發現自己變成了 root 
                         </p>
                     </div>
                 </div> 
@@ -232,10 +232,10 @@
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            這時候用就直接改掉 password 就好惹～<br>
-                            指令是 passwd [User]，下面就會問你新的 password<br>
-                            詳細可見  <a target="_blank" href="http://linux.vbird.org/linux_basic/0410accountmanager.php#passwd" rel="noopener noreferrer"> 鳥哥的Linux </a> 就不一一解釋<br>
-                            之後重開機就可以用新密碼 login 
+                            &nbsp; 這時候用就直接改掉 password 就好惹～<br>
+                            &nbsp; 指令是 passwd [User]，下面就會問你新的 password<br>
+                            &nbsp; 詳細可見  <a target="_blank" href="http://linux.vbird.org/linux_basic/0410accountmanager.php#passwd" rel="noopener noreferrer"> 鳥哥的Linux </a> 就不一一解釋<br>
+                            &nbsp; 之後重開機就可以用新密碼 login 
                         </p>
                     </div>
                 </div> 
@@ -253,8 +253,8 @@
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            我們先拿剛剛更改的 Password 先 login<br>
-                        跟 sudo 編輯<font color="#0000ff"><b>  /etc/mysql/my.cnf </b></font>
+                          &nbsp; 我們先拿剛剛更改的 Password 先 login<br>
+                        &nbsp; 跟拿 sudo 權限編輯<font color="#0000ff"><b>  /etc/mysql/my.cnf </b></font>
                         </p>
                     </div>
                 </div> 
@@ -269,7 +269,7 @@
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            進去後應該是像這樣
+                            &nbsp; 進去後應該是像這樣
                         </p>
                     </div>
                 </div> 
@@ -283,7 +283,7 @@
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            接著我們到<font color="#0000ff"><b> [mysqld] </b></font>那行
+                            &nbsp; 接著我們到<font color="#0000ff"><b> [mysqld] </b></font>那行
                         </p>
                     </div>
                 </div> 
@@ -297,7 +297,7 @@
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            在那行下面加上<font color="#0000ff"><b> skip-grant-tables</b></font>，:wq 存檔
+                            &nbsp; 在那行下面加上<font color="#0000ff"><b> skip-grant-tables</b></font>，:wq 存檔
                         </p>
                     </div>
                 </div> 
@@ -314,7 +314,7 @@ sudo service mysql restart
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            接著重開 MySQL 服務
+                            &nbsp; 接著重開 MySQL 服務
                         </p>
                     </div>
                 </div> 
@@ -329,7 +329,7 @@ sudo service mysql restart
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            發現我們不用密碼就能 login 了
+                            &nbsp; 發現我們不用密碼就能 login 了
                         </p>
                     </div>
                 </div> 
@@ -346,7 +346,7 @@ use mysql
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            選擇 mysql 這個 DB
+                            &nbsp; 選擇 mysql 這個 DB
                         </p>
                     </div>
                 </div> 
@@ -363,7 +363,7 @@ update user set password=PASSWORD("NEW_Password") where user='root';
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            把MySQL 裡面 root 的 password 欄位重置
+                            &nbsp; 把MySQL 裡面 root 的 password 欄位重置
                         </p>
                     </div>
                 </div>             
@@ -377,7 +377,7 @@ update user set password=PASSWORD("NEW_Password") where user='root';
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            好了之後一樣進去<font color="#0000ff"><b> /etc/mysql/my.cnf </b></font>把剛剛加的<font color="#ff0000"><b> skip-grant-tables </b></font>刪除，接著wq 出來
+                            &nbsp; 好了之後一樣進去<font color="#0000ff"><b> /etc/mysql/my.cnf </b></font>把剛剛加的<font color="#ff0000"><b> skip-grant-tables </b></font>刪除，接著wq 出來
                         </p>
                     </div>
                 </div>             
@@ -394,7 +394,7 @@ sudo service mysql restart
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            一樣把 Service 重新啟動
+                            &nbsp; 一樣把 Service 重新啟動
                         </p>
                     </div>
                 </div>             
@@ -408,7 +408,7 @@ sudo service mysql restart
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            最後我們就可以看到我們可以用新密碼 login 惹
+                            &nbsp; 最後我們就可以看到我們可以用新密碼 login 惹
                         </p>
                     </div>
                 </div>             
