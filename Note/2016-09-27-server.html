@@ -230,62 +230,168 @@
                     </div>
                 </div> 
 
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            我們先拿剛剛更改的 Password 先 login
+                        </p>
+                    </div>
+                </div>
+
                 <!-- MySQL 01 -->
                 <div id="page-wrapper">
                     <img class="img-thumbnail" src="2016-09-27/mysql/my01.png" alt="MySQL01">
                 </div>
                 <!-- MySQL 01 -->
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            編輯 /etc/mysql/my.cnf
+                        </p>
+                    </div>
+                </div> 
+
                 <!-- MySQL 02 -->
                 <div id="page-wrapper">
                     <img class="img-thumbnail" src="2016-09-27/mysql/my02.png" alt="MySQL02">
                 </div>
                 <!-- MySQL 02 -->
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            進去後應該是像這樣
+                        </p>
+                    </div>
+                </div> 
+
                 <!-- MySQL 03 -->
                 <div id="page-wrapper">
                     <img class="img-thumbnail" src="2016-09-27/mysql/my03.png" alt="MySQL03">
                 </div>
-                <!-- MySQL 03 -->                
+                <!-- MySQL 03 -->  
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            接著我們到 [mysqld] 那行
+                        </p>
+                    </div>
+                </div> 
+
                 <!-- MySQL 04 -->
                 <div id="page-wrapper">
                     <img class="img-thumbnail" src="2016-09-27/mysql/my04.png" alt="MySQL04">
                 </div>
                 <!-- MySQL 04 -->
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            再它下面加上 skip-grant-tables
+                        </p>
+                    </div>
+                </div> 
+              
                 <!-- MySQL 05 -->
                 <div id="page-wrapper">
                     <img class="img-thumbnail" src="2016-09-27/mysql/my05.png" alt="MySQL05">
                 </div>
-                <!-- MySQL 05 -->                
+                <!-- MySQL 05 -->   
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            sudo service mysql restart 重開 MySQL 服務
+                        </p>
+                    </div>
+                </div> 
+                           
                 <!-- MySQL 06 -->
                 <div id="page-wrapper">
                     <img class="img-thumbnail" src="2016-09-27/mysql/my06.png" alt="MySQL06">
                 </div>
-                <!-- MySQL 06 -->                
+                <!-- MySQL 06 -->       
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            發現我們不用密碼就能 login 了
+                        </p>
+                    </div>
+                </div> 
+                       
                 <!-- MySQL 07 -->
                 <div id="page-wrapper">
                     <img class="img-thumbnail" src="2016-09-27/mysql/my07.png" alt="MySQL07">
                 </div>
-                <!-- MySQL 07 -->                
+                <!-- MySQL 07 -->       
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            use mysql 選擇 mysql 這個 DB
+                        </p>
+                    </div>
+                </div> 
+                       
                 <!-- MySQL 08 -->
                 <div id="page-wrapper">
                     <img class="img-thumbnail" src="2016-09-27/mysql/my08.png" alt="MySQL08">
                 </div>
-                <!-- MySQL 08 -->                
+                <!-- MySQL 08 -->    
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            update user set password=PASSWORD("NEW_Password"?) where user='root'; 把MySQL 裡面 root 的 password 欄位重置
+                        </p>
+                    </div>
+                </div>             
                 
-                <!-- MySQL 09 -->
+                <!-- MySQL 10 -->
                 <div id="page-wrapper">
                     <img class="img-thumbnail" src="2016-09-27/mysql/my10.png" alt="MySQL10">
                 </div>
-                <!-- MySQL 09 -->                
-                <!-- MySQL 10 -->
+                <!-- MySQL 10 -->    
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            好了之後一樣進去 /etc/mysql/my.cnf 把剛剛加的 skip-grant-tables 刪除，接著wq 出來
+                        </p>
+                    </div>
+                </div>             
+                            
+                <!-- MySQL 11 -->
                 <div id="page-wrapper">
                     <img class="img-thumbnail" src="2016-09-27/mysql/my11.png" alt="MySQL11">
                 </div>
-                <!-- MySQL 10 -->                
-                <!-- MySQL 11 -->
+                <!-- MySQL 11 -->       
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            一樣 sudo service mysql restart 把Server 重新啟動
+                        </p>
+                    </div>
+                </div>             
+                         
+                <!-- MySQL 12 -->
                 <div id="page-wrapper">
                     <img class="img-thumbnail" src="2016-09-27/mysql/my12.png" alt="MySQL12">
                 </div>
-                <!-- MySQL 11 -->
+                <!-- MySQL 12 -->  
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            最後我們就可以看到我們可以用新密碼 login 惹
+                        </p>
+                    </div>
+                </div>             
+                
                 <!-- End -->
 
                 <!-- Page Contect End -->
