@@ -177,7 +177,39 @@ $new_name = $new_name_gbk = str_replace('.','',Time::getMicrotime()).'.'.end(exp
                  <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">                            
-                            根據這句我們可以發現它最後去接由 <font color="0000ff">$_POST['pic']</font> 吐出來的東西當成副檔名
+                            根據這句，我們可以發現它最後去接由 <font color="0000ff">$_POST['pic']</font> 吐出來 "<font color="0000ff"> . </font>" 最後的東西當成副檔名<br>
+                            不過看起來還不能直接用，需要稍微經過一番掙扎
+                        </p>
+                    </div>
+                </div>
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">                            
+                            根據原文中所提的
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+<pre>
+<code class="txt">
+1、图片会经过php的图像库处理，如何在处理后仍然保留shell语句 
+2、远程加载图片需要通过 file_exists 函数的验证
+( 要知道 http(s) 对于 file_exists 来说会固定返回 false )
+
+</code>
+</pre>
+                           
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">                            
+                            於是乎作者用了一個很棒的方法，<del>既然一個麵包吃不夠，就吃兩個蛋糕啊</del><br>
+                            既然 http 不行，那我用 ftp 啊 (笑)
                         </p>
                     </div>
                 </div>
