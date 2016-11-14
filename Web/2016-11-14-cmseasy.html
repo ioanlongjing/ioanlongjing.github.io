@@ -209,10 +209,51 @@ $new_name = $new_name_gbk = str_replace('.','',Time::getMicrotime()).'.'.end(exp
                     <div class="col-lg-12">
                         <p class="lead">                            
                             於是乎作者用了一個很棒的方法，<del>既然一個麵包吃不夠，就吃兩個蛋糕啊</del><br>
-                            既然 http 不行，那我用 ftp 啊 (笑)
+                            既然 http 不行，那我用 ftp 啊 (笑)，於是乎，作者就用 ftp 去繞過 file_exits()
+
                         </p>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div id="page-wrapper">
+                            <img class="img-thumbnail" src="2016-11-14/Wrapper.png" >
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            PS : 關於 Wrapper 的詳細請參考 <a href="http://php.net/manual/pl/wrappers.ftp.php" target="_blank" rel="noopener noreferrer">php.net</a> 
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+<pre>
+<code class="php">
+        $len = 1;
+        if(config::get('base_url') != '/'){
+            $len = strlen(config::get('base_url'))+1;
+        }
+        if(substr($_POST['pic'],0,4) == 'http'){
+            front::$post['thumb'] = str_ireplace(config::get('site_url'),'',$_POST['pic']);
+        }else{
+            front::$post['thumb'] = substr($_POST['pic'],$len);
+        }
+        
+</code>
+</pre>
+                           
+                    </div>
+                </div>
+
 
                 <!-- Page Contect End -->
             </div>
