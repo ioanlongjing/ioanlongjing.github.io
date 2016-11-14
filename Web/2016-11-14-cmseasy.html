@@ -116,17 +116,71 @@
 
                 <div class="row">
                 <div class="col-lg-3"></div>
-                <div class="col-lg-6">
+                <div class="col-lg-5">
                         <div class="well">
                             <h4>
-                            內容原始為 : <a href="https://xianzhi.aliyun.com/forum/read/215.html">安全技术社区</a>  本篇為筆記取向
+                            內容原始為 : <a href="https://xianzhi.aliyun.com/forum/read/215.html" target="_blank" rel="noopener noreferrer">安全技术社区</a>  本篇為筆記取向
                             </h4>
                         </div>
                 </div>
-                <div class="col-lg-3"></div>
+                <div class="col-lg-4"></div>
                 </div>
-             
 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">                            
+                            首先, 故事是這樣的... <br>
+                            官方在 2016/10/12 時，發了一包 Patch
+                            [ <a href="https://github.com/ioanlongjing/CmsEasy_5.6_20161012_Updata_Patch" target="_blank" rel="noopener noreferrer">檔案備份 ( github )</a> ]
+                        </p>
+                    </div>
+                </div>
+ 
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">                            
+                            接著我們到 <font color="0000ff">lib/default/tool_act.php</font> 時可以發現有一整個 function 被 commit 掉了
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div id="page-wrapper">
+                            <img class="img-thumbnail" src="2016-11-14/unfunction.png" >
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div><br>
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">                            
+                            那首先我們可以看到
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+<pre>
+<code class="php">
+$new_name = $new_name_gbk = str_replace('.','',Time::getMicrotime()).'.'.end(explode('.',$_POST['pic']));
+
+</code>
+</pre>
+                           
+                    </div>
+                </div>
+
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">                            
+                            根據這句我們可以發現它最後去接由 <font color="0000ff">$_POST['pic']</font> 吐出來的東西當成副檔名
+                        </p>
+                    </div>
+                </div>
 
                 <!-- Page Contect End -->
             </div>
