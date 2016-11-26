@@ -163,8 +163,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            這隻 webshell 主要自己不會去 system call，都是從其他地方 include 進來<br>
-                            所以對於一些 WAF 就會檢查不太出來，於是乎，就有人用了這點，寫出了這隻 webshell 然後把本身存在 memory 裡面，除非網管、鑑識人員發現把本身 Process 關掉或關機，不然基本上是有點難移掉的 
+                            而且這隻 webshell 本身自己不會去執行 system call，都是從其他檔案 include 進來<br>
+                            所以對於一些 WAF 就會檢查不太出來，之後再把本身存在 memory 裡面<br>
+                            除非網管、鑑識人員發現把本身 Process 關掉或重開機，不然基本上是有點難移掉的 
                         </p>
                     </div>
                 </div>
