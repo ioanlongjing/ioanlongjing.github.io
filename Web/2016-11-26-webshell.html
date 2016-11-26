@@ -127,7 +127,7 @@
                     <div class="col-lg-12">
                         <p class="lead">
                             一般的 Webshell 常會遇到一個問題，當木馬被網管發現了，通常會被 rm 掉 <br>
-                            <del> 不過個人在其他人主機發現了有趣的 Webshell 都會存起來，畢竟一些 webshell 寫的比原本的還精美 </del>
+                            <del> 不過個人在其他人主機發現了有趣的 webshell 都會存起來，畢竟一些 webshell 寫的比原本的還精美 </del>
                         </p>
                     </div>
                 </div>
@@ -135,9 +135,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            那... 這個 Webshell 有什麼優點呢?<br>
-                            我們都知道有的 WAF 或各種檢查 User 上傳的網頁或程式<br>
+                            那... 這個 webshell 有什麼優點呢?<br>
+                            我們都知道有的 WAF 或各種檢查 user 上傳的網頁或程式<br>
                             可能會對 User 上傳的東西來檢查裡面有沒有一些比較危險的 Function<br>
+                            <br>
                             例如
                             <font color="blue">exec</font>,
                             <font color="blue">passthru</font>, 
@@ -150,7 +151,9 @@
                             <font color="blue">passthru</font>, 
                             <font color="blue">shell_exec</font>, 
                             <font color="blue">system</font> ,
-                            <font color="blue">proc_op</font> ...etc 等，常用在 webshell 或可以執行 system call 的 function <br>
+                            <font color="blue">proc_op</font> ...etc 等<br>
+                            <br>
+                            因為這些 function 可以有意無意的執行 system call，所以常用在 webshell 的裡 <br>
                             但是對 .txt 或是其他的副檔名的檔案，或是從其他地方 include 近來的內容，可能就不會檢查的那麼仔細
                         </p>
                     </div>
