@@ -164,6 +164,43 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            假設今天漏洞忽然噴出來了，而我們由於各種歷史原因，不太適合直接改 Code 或是需要原本 Coding 的人權限才能修改<br>
+                            於是我們這次改用 F5 的 ASM 來嘗試先擋下來
+                        </p>
+                    </div>
+                </div>  
+   
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            當我們 login 後點到
+                            Security -> Options -> Application Security -> Attack Signatures -> Attack Signature List<br>
+                        </p>
+                    </div>
+                </div> 
+
+
+                
+            <div class="row">
+                <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <img class="img-thumbnail" src="2017-03-18/1.1.png" >
+                    </div>
+                <div class="col-lg-3"></div>
+            </div>  
+<br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            並在 Rule 上寫 ： <font color="#ff0000"> pcre: "/[oO]gnl/"; </font> <br>
+                            ( 因為 Ognl 表達式通常不會在 user request 時來，因為 server 在build 網頁時就會被 compiler 掉，如果 user 有用到，可能在嘗試對 server code injection ，所以我們在 user 傳到 server 時，WAF 上就把它擋掉，避免傳到 server )
+                        </p>
+                    </div>
+                </div> 
+
             <div class="row">
                 <div class="col-lg-3"></div>
                     <div class="col-lg-6">
@@ -172,6 +209,22 @@
                 <div class="col-lg-3"></div>
             </div>
 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            再來我們加一個 Group ，如果有其他知道的東西要擋，也可以一併加入<br>
+                            選項位置在
+                            Security -> Options -> Application Security -> Attack Signatures -> Attack Signature Sets<br>
+                        </p>
+                    </div>
+                </div>             
+            <div class="row">
+                <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <img class="img-thumbnail" src="2017-03-18/2.1.png" >
+                    </div>
+                <div class="col-lg-3"></div>
+            </div>
             <div class="row">
                 <div class="col-lg-3"></div>
                     <div class="col-lg-6">
