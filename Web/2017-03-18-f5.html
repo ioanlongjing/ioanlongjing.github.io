@@ -288,7 +288,32 @@
                         </p>
                     </div>
                 </div> 
-  
+
+                  <div class="row">
+                    <div/>
+                    <div class="col-lg-10">
+<pre>
+<code class="php">
+when HTTP_REQUEST 
+{
+    if {([HTTP::header exists "Content-Type"])}
+    {
+        set ctheader [string tolower [HTTP::header "Content-Type"]]
+        if {($ctheader contains "multipart/form-data") and (($ctheader contains "'") or ($ctheader contains "ognl") or ($ctheader contains "java.lang") or ($ctheader contains "bash") or ($ctheader contains "cmd") or ($ctheader contains "org.apache")) }
+        {
+            log local0. "Found Struts S2-045 attack! Rejecting a request with Content-type [HTTP::header "Content-Type"] to  [HTTP::uri]  from  [IP::client_addr]"
+              
+            #if you do not want to reset the connection, then comment out the line below reject
+        }
+    }
+}
+
+</code>
+</pre>
+                           
+                    </div>
+                    <div/>
+                </div>
 
                 <!-- Page Contect End -->
             </div>
