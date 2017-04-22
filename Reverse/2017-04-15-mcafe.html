@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Office Zero-Day.</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/ir_black.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">打鐵鋪</a>
+            </div>
+ 
+
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="../index.html"><i class="fa fa-fw fa-dashboard"></i> Index</a>
+                    </li>
+                    <li>
+                        <a href="../AboutMe.html"><i class="fa fa-fw fa-edit"></i> About Me</a>
+                    </li>
+                    <li>
+                        <a href="../Web.html"><i class="fa fa-fw fa-desktop"></i> Web Security</a>
+                    </li>
+                    <li class="active">
+                        <a href="../Reverse.html"><i class="fa fa-fw fa-wrench"></i> Reverse</a>
+                    </li>
+                    <li>
+                        <a href="../Translate.html"><i class="fa fa-fw fa-file"></i> Translate</a>
+                    </li>
+                     <li>
+                        <a href="../Software.html"><i class="fa fa-fw fa-arrows-v"></i> Software</a>
+                    </li>                   
+                    <li>
+                        <a href="../Note.html"><i class="fa fa-fw fa-table"></i> Note</a>
+                </ul>
+                    </li>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="index.html">Blog</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-fw fa-file"></i>  <a href="../Reverse.html">Reverse</a>
+                            </li>
+                            <li class="active">
+                                Critical Office Zero-Day Attacks Detected in the Wild.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="jumbotron">
+                    <h2 class="page-header">
+                    Critical Office Zero-Day Attacks Detected in the Wild.
+                    </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <p class="lead">
+                    新聞原文轉自 :
+                    <a href="https://securingtomorrow.mcafee.com/mcafee-labs/critical-office-zero-day-attacks-detected-wild/" target="_blank" rel="noopener noreferrer">securingtomorrow.mcafee.com</a>  
+                    </p>
+                </div>
+                <div class="col-lg-4"></div>
+                </div>
+
+            <!-- 1        -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    At McAfee, we have put significant efforts in hunting attacks such as advanced persistent threats and “zero days.” Yesterday, we observed suspicious activities from some samples. After quick but in-depth research, this morning we have confirmed these samples are exploiting a vulnerability in Microsoft Windows and Office that is not yet patched.
+                    </p>  
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead">
+                    在 MaAfee, 我們為了捕捉針對持續性的攻擊跟 "Zero Days" 投入了大量努力。在昨天我們觀察到一些可疑的攻擊行為。這早上，在我們快但深入的研究中，我們確認了一些 Micoroft Windows 跟 Office 都還沒有補上 Pathed 的 Exploit 的弱點。 
+                    </p>
+                </div>
+            </div>
+            <!-- 1 End -->
+            <!-- 2     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    This blog post serves as a heads-up for our customers and all Office users to protect against this zero-day attack.
+                    </p>      
+                </div>
+                 <div class="col-lg-6">
+                    <p class="lead">
+                    這篇 Blog 是要提醒我們客戶跟全部 Office 使用者，要小心這個 Zero Day 的攻擊。 
+                    </p>
+                </div>
+            </div>
+            <!-- 2 End -->
+            <!-- 3     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    The samples we have detected are organized as Word files (more specially, RTF files with “.doc” extension name). The exploit works on all Microsoft Office versions, including the latest Office 2016 running on Windows 10. The earliest attack we have seen dates to late January.
+                    </p>      
+                </div>
+                 <div class="col-lg-6">
+                    <p class="lead">
+                    在這範例中我們檢測到一個主要為 Word 的檔案 （更具體的說，是副檔名為 ".doc" 的 RTF 的檔案格式)。 這個 exploit 可以用於所有版本的 Microsoft Office 中，  包括 Windows 10 的 Office 2016。我們發現最早這攻擊在一月下旬。
+                    </p>
+                </div>
+            </div>
+            <!-- 3 End -->
+            <!-- 4     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    The exploit connects to a remote server (controlled by the attacker), downloads a file that contains HTML application content, and executes it as an .hta file. Because .hta is executable, the attacker gains full code execution on the victim’s machine. Thus, this is a logical bug, and gives the attackers the power to bypass any memory-based mitigations developed by Microsoft. The following is a part of the communications we captured:
+                    </p>      
+                </div>
+                 <div class="col-lg-6">
+                    <p class="lead">
+                    這個 exploit 會連接到遠端的伺服器（被攻擊者控制）。下載並執行一個 HTML 格式，副檔名為 .hta 的檔案。因為它的副檔名為 .hta，攻擊者可以獲得完整得 code execution 執行權限。因為這個邏輯上的 bug ，可以讓攻擊者獲得更多的權限，來 bypass 任何微軟開發來保護記憶體的設定。<br>
+                    這是我們抓到的部分：
+                    </p>
+                </div>
+            </div>
+            <!-- 4 End -->
+            <!-- Img    -->
+            <div class="row">
+                <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <img class="img-thumbnail" src="2017-04-15/1.png" >
+                    </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <!-- Img End-->
+            <br>
+            <!-- 5     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    The .hta content is disguised as a normal RTF file to evade security products, but we can find the malicious Visual Basic scripts in a later part of the file:
+                    </p>      
+                </div>
+                 <div class="col-lg-6">
+                    <p class="lead">
+                    這個偽裝成一般 RTF 檔案的 .hta 會來規避安全用的產品，但是我們找到惡意的 Visual Basic scripts，這邊是我們節錄這檔案的部分
+                    </p>
+                </div>
+            </div>
+            <!-- 5 End -->
+            <!-- Img    -->
+            <div class="row">
+                <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <img class="img-thumbnail" src="2017-04-15/2.png" >
+                    </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <!-- Img End-->
+            <br>
+            <!-- 6     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    The successful exploit closes the bait Word document, and pops up a fake one to show the victim. In the background, the malware has already been stealthily installed on the victim’s system.
+                    </p>      
+                </div>
+                 <div class="col-lg-6">
+                    <p class="lead">
+                    這個 exploit 會把原本的 Word document 關掉，跟彈出另一份文件給受害者。 並且在系統背景裡偷偷安裝惡意套件
+                    </p>
+                </div>
+            </div>
+            <!-- 6 End -->
+            <!-- 7     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    The root cause of the zero-day vulnerability is related to the Windows Object Linking and Embedding (OLE), an important feature of Office. (Check our <a href="https://www.blackhat.com/docs/us-15/materials/us-15-Li-Attacking-Interoperability-An-OLE-Edition.pdf" target="_blank" rel="noopener noreferrer">Black Hat USA 2015 presentation</a>, in which we examine the attack surface of this feature.)
+                    </p>      
+                </div>
+                 <div class="col-lg-6">
+                    <p class="lead">
+                    這個 Zero Day 發生的原因為 Windows Object Linking and Embedding (OLE)，這是在 Office 裡面是一個很重要的功能。（詳情請參考我們在<a href="https://www.blackhat.com/docs/us-15/materials/us-15-Li-Attacking-Interoperability-An-OLE-Edition.pdf" target="_blank" rel="noopener noreferrer"> Black Hat USA 2015 的介紹</a>，我們有做了些關於這種攻擊的一些介紹） 
+                    </p>
+                </div>
+            </div>
+            <!-- 7 End -->
+            <!-- 8     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    We strongly suggest Office users take the following actions to protect or mitigate against this zero-day attack before Microsoft issues an official patch. We notified the Microsoft Security Response Center as soon as we found the suspicious samples, and we will continue to work with them to protect Office users.
+                    </p>      
+                </div>
+                 <div class="col-lg-6">
+                    <p class="lead">
+                    我們強烈的建議 Office 的使用者，在 Micosoft 修補完這 issues 前，遵照這些動作來保護或減輕這個 Zero Day 攻擊帶來的危害。在我們找到這些可疑的範例時，我們馬上通知給 Microsoft Security Response Center ，接下來我們將繼續為著保護 Office 使用者工作。
+                    </p>
+                </div>
+            </div>
+            <!-- 8 End -->
+            <!-- 9     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    - Do not open any Office files obtained from untrusted locations.<br>
+                    - According to our tests, this active attack cannot bypass the Office Protected View, so we suggest everyone ensure that Office Protected View is enabled.
+                    </p>      
+                </div>
+                 <div class="col-lg-6">
+                    <p class="lead">
+                    - 不要開啟任何來路不明的 Office 檔案<br>
+                    - 根據我們的測試，這個攻擊者沒辦法 Bypass Office Protected View，所以我們建議將 Office Protected View 功能打開
+                    </p>
+                </div>
+            </div>
+            <!-- 9 End -->
+            <!-- 9     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    We will continue to update our findings on this ongoing investigation.
+                    </p>      
+                </div>
+                 <div class="col-lg-6">
+                    <p class="lead">
+                    我們會繼續對這件事情繼續調查
+                    </p>
+                </div>
+            </div>
+            <!-- 9 End -->
+            <!-- 感謝     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>
+                    Special thanks to Bing Sun, Chong Xu, Christiaan Beek, and Abhishek Karnik (and his team) for their help with this investigation.
+                    </p>      
+                </div>
+                 <div class="col-lg-6">
+                    <p>
+                    特別感謝 Bing Sun, Chong Xu, Christiaan Beek, and Abhishek Karnik (跟他的團隊)，對用這次事件的幫助
+                    </p>
+                </div>
+            </div>
+            <!-- 感謝 End -->
+
+
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../js/plugins/morris/raphael.min.js"></script>
+    <script src="../js/plugins/morris/morris.min.js"></script>
+    <script src="../js/plugins/morris/morris-data.js"></script>
+
+</body>
+
+</html>
