@@ -214,12 +214,12 @@
             <div class="row">
                 <div class="col-lg-6">
                     <p class="lead">
-                    - <a href="step1">Step 0</a>: Shellcode sorcery to determine if x86 or x64, and branches as such.
+                    - <a href="#step0">Step 0</a>: Shellcode sorcery to determine if x86 or x64, and branches as such.
                     </p>
                 </div>
                 <div class="col-lg-6">
                     <p class="lead">
-                    - <a href="step1">Step 0</a>: Shellcode 會先確認是 x86 還是 x64，跟一些其他的項目。
+                    - <a href="#step0">Step 0</a>: Shellcode 會先確認是 x86 還是 x64，跟一些其他的項目。
                     </p>
                 </div>
             </div>
@@ -228,16 +228,31 @@
             <div class="row">
                 <div class="col-lg-6">
                     <p class="lead">
-                    - <a href="step1">Step 1</a>: Locates the <a href="http://wiki.osdev.org/Interrupt_Descriptor_Table" target="_blank" rel="noopener noreferrer">IDT</a> from the <a href="https://en.wikipedia.org/wiki/Processor_Control_Region" target="_blank" rel="noopener noreferrer">KPCR</a>, and traverses backwards from the first interrupt handler to find ntoskrnl.exe base address (DOS MZ header).
+                    - <a href="#step1">Step 1</a>: Locates the <a href="http://wiki.osdev.org/Interrupt_Descriptor_Table" target="_blank" rel="noopener noreferrer">IDT</a> from the <a href="https://en.wikipedia.org/wiki/Processor_Control_Region" target="_blank" rel="noopener noreferrer">KPCR</a>, and traverses backwards from the first interrupt handler to find ntoskrnl.exe base address (DOS MZ header).
                     </p>
                 </div>
                 <div class="col-lg-6">
                     <p class="lead">
-                    - <a href="step1">Step 1</a>: 從 <a href="http://wiki.osdev.org/Interrupt_Descriptor_Table" target="_blank" rel="noopener noreferrer">IDT</a> 到 <a href="https://en.wikipedia.org/wiki/Processor_Control_Region" target="_blank" rel="noopener noreferrer">KPCR</a>，跟 traverses backwards 到第一個 interrupt handler 去找 ntoskrnl.exe 的 base address ( DOS MZ 的 header )
+                    - <a href="#step1">Step 1</a>: 從 <a href="http://wiki.osdev.org/Interrupt_Descriptor_Table" target="_blank" rel="noopener noreferrer">IDT</a> 到 <a href="https://en.wikipedia.org/wiki/Processor_Control_Region" target="_blank" rel="noopener noreferrer">KPCR</a>，跟 traverses backwards 到第一個 interrupt handler 去找 ntoskrnl.exe 的 base address ( DOS MZ 的 header )
                     </p>
                 </div>
             </div>
             <!-- stap1 End -->
+            <!-- stap1     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    - <a href="#step2">Step 2</a>: Reads ntoskrnl.exe's exports directory, and uses hashes (similar to usermode shellcode) to find ExAllocPool/ExFreePool/ZwQuerySystemInformation functions.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead">
+                    - <a href="#step2">Step 2</a>: 讀取 ntoskrn1.exe 所在得目錄，跟使用 hashes (類似 usermode shellcode) 來找 ExAllocPool/ExFreePool/ZwQuerySystemInformation 這些 function 。
+                    </p>
+                </div>
+            </div>
+            <!-- stap1 End -->
+
 
             <!-- /.container-fluid -->
 
