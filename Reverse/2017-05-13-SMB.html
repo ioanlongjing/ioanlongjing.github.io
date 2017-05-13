@@ -252,7 +252,35 @@
                 </div>
             </div>
             <!-- stap2 End -->
-
+            <!-- stap3     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    - <a href="#step3">Step 3</a>: Invokes ZwQuerySystemInformation() with the enum value SystemQueryModuleInformation, which loads a list of all drivers. It uses this to locate Srv.sys, an SMB driver.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead">
+                    - <a href="#step3">Step 3</a>: 調用 ZwQuerySystemInformation() 這函數來印出 SystemQueryModuleInformation 變數的值，當載入全部的 driver，它可以定位出 Srv.sys 跟 SMV driver。
+                    。
+                    </p>
+                </div>
+            </div>
+            <!-- stap3 End -->
+            <!-- stap4     -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="lead">
+                    - <a href="#step4">Step 4</a>: Switches the SrvTransactionNotImplemented() function pointer located at SrvTransaction2DispatchTable to its own hook function.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead">
+                    - <a href="#step4">Step 4</a>: 當切換成 SrvTransactionNotImplemented() 函數時，列印出在 有 Hook 在 SrvTransactionNotImplemented 的 function。
+                    </p>
+                </div>
+            </div>
+            <!-- stap4 End -->
 
             <!-- /.container-fluid -->
 
