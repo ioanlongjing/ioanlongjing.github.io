@@ -144,6 +144,15 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            接著我們可以用 grep -v -f <(sed "s/\(.\+\)/^\1$/" failIP.txt) all.txt > filterIP.txt 對 all 去做過濾<br>
+                            值得一提的是，後來跟朋友討論，才知道有 comm 這指令，也一起記錄一下 XD 
+                        </p>
+                    </div>
+                </div>
+
                  <div class="row">
                     <div class="col-lg-12">
 <pre>
