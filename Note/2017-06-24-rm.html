@@ -114,7 +114,33 @@
                     </div>
                 </div>
 
- 
+                <div class="row">
+                    <div class="col-lg-12">
+<pre>
+<code class="shell"> 
+rm -fr .bash_history; 
+rm -fr /var/run/utmp;
+rm -fr /var/log/lastlog;
+rm -fr /var/usr/adm/lastlog;
+rm -fr .bash_history;
+cd /var/log/;
+rm -fr wtmp;
+rm -fr secure;
+rm -fr lastlog;
+rm -fr messages;
+touch messages;
+touch wtmp;
+touch secure;
+touch lastlog;
+cd /root;
+rm -fr bash_history;
+touch .bash_history
+
+</code>
+</pre>
+                    </div>
+                </div>
+<br> 
   
 
                 <!-- Page Contect End -->
