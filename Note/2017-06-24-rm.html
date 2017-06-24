@@ -160,7 +160,15 @@ mv .bash_history_old .bash_history
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead"> 
-                            首先，我們先把目前的 .bash_history 備份起來，等等貼回來
+                            1. 首先，我們先把目前的 .bash_history 備份起來，等等貼回來<br>
+                           
+                            2. 把由於可能用一些 exploit remote login，先 login 資訊刪掉(/utmp 是現在 login，lastlog 是最後 login，不過都先刪掉好了)<br>
+
+                            3.  /var/usr/adm/lastlog 把一些軟體安裝資訊刪掉，因為有時會幫忙（？）裝一些軟體
+
+                            4. 再來把 messages、wtmp、secure、lastlog 刪掉，刪掉 messages 的原因是因為 mail, cron, daemon, kern, auth 會在那邊
+
+                            5. 最後把 .bash_history 倒回去就打完收工了 XD
                         </p>
                     </div>
                 </div>
