@@ -123,6 +123,38 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            接著來筆記一下這次學到的事情好了<br>
+                            1. 在 windows 排程裡，去 call vmrun 似乎... 無法在一隻 script 內同時對兩隻 vm 做控制，第二隻會無法 work <br>
+                            2. 本打算用 windows 的 PsExec 來同時控制兩隻, 不過很多防毒會對 PsExec 跳警告，為避免麻煩.. 故採用其他方式<br>
+                            # 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            來筆記一下本來要用的方式
+                        </p>
+                    </div>
+                </div>
+                
+                 <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-9">
+<pre>
+<code class="batch">
+PsExec.exe -accepteula -h -i 1 %vmrun% start %vm_loc% >> %log%
+
+</code>
+</pre>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+
                  <div class="row">
                     <div class="col-lg-1"></div>
                     <div class="col-lg-9">
