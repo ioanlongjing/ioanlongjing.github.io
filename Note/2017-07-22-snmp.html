@@ -239,7 +239,49 @@ sudo vim /etc/snmp/snmpd.conf
                         </p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div id="page-wrapper">
+                            <img class="img-thumbnail" src="2017-07-22/f5-1.png" >
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            再來把我們的 IP 新增到 Allow List 裡面
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div id="page-wrapper">
+                            <img class="img-thumbnail" src="2017-07-22/f5-2.png" >
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            OK～ 看起來可以了，讓我們 try 看看<br>
+                            讓我們 terminal 下指令
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+<pre>
+<code class="shell"> 
+$ snmpwalk -v 2c -c public  -O e 172.17.0.100
 
+</code>
+</pre>
+                    </div>
+                </div><br>
 
                 <!-- Page Contect End -->
             </div>
