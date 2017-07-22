@@ -162,6 +162,35 @@ sudo apt-get install snmp-mibs-downloader
 </pre>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            嗯，對，就這樣，那麼簡單<br>
+                            但是還不行用 （？）<br>
+                            因為預設來說，我們還必須設定一點小東西
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            需要修改一下 snmpd.conf 這檔案 <br>
+                            因為預設是設成不會去掃外面，我們先打開 snmpd.conf<br>
+                            當然，要用 vim, sublime 或是各種編輯軟體都可以
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+<pre>
+<code class="shell"> 
+sudo vim /etc/snmp/snmpd.conf
+
+</code>
+</pre>
+                    </div>
+                </div>
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
