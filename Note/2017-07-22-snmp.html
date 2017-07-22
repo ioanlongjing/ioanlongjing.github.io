@@ -282,6 +282,73 @@ $ snmpwalk -v 2c -c public  -O e 172.17.0.100
 </pre>
                     </div>
                 </div><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            實際 run 起來大概像這樣
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div id="page-wrapper">
+                            <img class="img-thumbnail" src="2017-07-22/f5-4.png" >
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            恩恩，看起來 OK，如果對方有設 Community 那些東西，可以到 v1, v2c 或 Access (v3) 設定 <br>
+                            一般情況比較多人都是用 v2c ，所以這邊用 v2c 設 Community 做示範
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div id="page-wrapper">
+                            <img class="img-thumbnail" src="2017-07-22/f5-5.png" >
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            我們在跑一次看看，這時我們稍微改一下指令
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+<pre>
+<code class="shell"> 
+$ snmpwalk -v 2c -c 12345  -O e 172.17.0.100
+
+</code>
+</pre>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div id="page-wrapper">
+                            <img class="img-thumbnail" src="2017-07-22/f5-6.png" >
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            恩恩，看起來 OK
+                        </p>
+                    </div>
+                </div>
+
 
                 <!-- Page Contect End -->
             </div>
