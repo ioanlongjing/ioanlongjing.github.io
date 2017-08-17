@@ -303,20 +303,67 @@ $   sudo cp /etc/squid3/squid.conf /etc/squid3/squid.conf.old
                 <div class="row">
                     <div class="col-lg-2">
 <pre>
-<code class="cmd"> 
-$    cd /ts/etc/
+<code class="shell"> 
+$    cd c
 
 </code>
 </pre>
                     </div>
                 </div> 
-                 <div class="row">
+                <div class="row">
                     <div class="col-lg-12">
                         <p class="lead"> 
                             3. 一樣 我們改檔案之前，記得備份一下 XD
                         </p>
                     </div>
-                </div>              
+                </div>  
+                <div class="row">
+                    <div class="col-lg-4">
+<pre>
+<code class="bash"> 
+$    cp services.ini services.ini.old
+
+</code>
+</pre>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            4. 再來就編輯它 XD
+                            我們的格式是...
+                        </p>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-lg-8">
+<pre>
+<code class="bash"> 
+    [proxy]
+    https_proxy=https://&lt;IP address of your HTTPS proxy server&gt;:&lt;HTTPS proxy server port&gt;
+
+</code>
+</pre>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            舉個例來說就是... 
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+<pre>
+<code class="bash"> 
+    [proxy]
+    https_proxy=https://172.17.0.110:9999
+
+</code>
+</pre>
+                    </div>
+                </div>            
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
