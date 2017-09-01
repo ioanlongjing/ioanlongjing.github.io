@@ -342,10 +342,24 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead"> 
-                            等我們確認完語法是我們要的結果後，我們可以裝一個 python 的套件 lxml 來抓下來 
+                            等我們確認完語法是我們要的結果後，我們可以裝一個 python 的套件 lxml 來抓下來<br>
+                            語法如...  
                         </p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-6">
+<pre>
+<code class="python">
+page = etree.HTML(html)
+for i in page.xpath(u"XPath語法"):
+    print i
+
+</code>
+</pre>
+                    </div>
+                </div> 
+
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
