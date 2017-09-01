@@ -292,7 +292,7 @@
                     <div class="col-lg-12">
                         <p class="lead"> 
                             注意到了沒？<br>
-                            我們這邊需要的 a 是 ul 下面 li 裡面的 a 
+                            我們這邊需要的 a 是 ul 下面 li 裡面 id 屬性為 "ContentPlaceHolder1_ContentPlaceHolder1_ListView1_itemPlaceholderContainer" 那一坨的 a 
                         </p>
                     </div>
                 </div>
@@ -305,6 +305,24 @@
                     </div>
                     <div class="col-lg-2"></div>
                 </div><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead"> 
+                            所以我們可以這樣下 //{{前tag}}/{{我們要的tag}}..<br>
+                            以這邊的例子，我們可以這樣下
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+<pre>
+<code class="txt">
+//ul[@id="ContentPlaceHolder1_ContentPlaceHolder1_ListView1_itemPlaceholderContainer"]/li/a/text()
+
+</code>
+</pre>
+                    </div>
+                </div> 
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
