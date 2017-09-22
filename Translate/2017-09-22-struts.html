@@ -282,6 +282,22 @@ IOUtils.copy(remoteUserInput, output);   // output is now also tainted because t
                     <div class="col-lg-3"></div>
                 </div><br>
 
+
+            <!-- 10        -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="lead">
+                            To make use of the taint tracking functionality in the DataFlow library, let's define the in argument to ContentTypeHandler.toObject(...) as a tainted source. First, we define how the query should recognize the ContentTypeHandler interface and the method toObject.
+                        </p>
+                    </div>
+                     <div class="col-lg-6">
+                        <p class="lead">
+                            為了在 DataFlow library 裡可以追蹤被污染的資料，我們可以定義一個輸入的參數 ContentTypeHandler.toObject(..) 做為要感染的來源。第一件就是我們應該去定義如何再 query 中 ContentTypeHandler 這個介面跟 toObject 這個 method。
+                        </p>
+                    </div>
+                </div>
+            <!-- 10 End --> 
+
             <!-- /.container-fluid -->
 
         </div>
