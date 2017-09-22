@@ -197,6 +197,20 @@
                     </div>
                 </div>
             <!-- 5 End -->
+            <!-- 6        -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                        <p class="lead">
+                            This query detects common ways through which user-controlled data flows to a deserialization method. However, some projects use a slightly different approach to receive remote user input. For example, Apache Struts uses the ContentTypeHandler interface. This converts data into Java objects. Since implementations of this interface usually deserialize the data passed to them, every class that implements this interface is potentially of interest. The standard QL query for detecting unsafe deserialization of user-controlled data can easily be adapted to recognize this additional method for processing user input. This is done by defining a custom data source.
+                        </p>
+                    </div>
+                     <div class="col-lg-6">
+                        <p class="lead">
+                            這種 query 偵測 user 端傳入反序列化的資料還蠻常見的。然而，某些情況下會用些不同的方式，去接收遠端使用者傳入的資料。例如 Apache Struts 的 user 會使用 ContentTypeHandler 這個介面。標準的 QL query 可以很容易的檢測出從 user 傳來不安全的資料。這個方式可以由使用者來定義一個資料來源。
+                        </p>
+                    </div>
+                </div>
+            <!-- 6 End -->
 
             <!-- /.container-fluid -->
 
