@@ -407,6 +407,23 @@ class ContentTypeHandlerInput extends FlowSource
                 </div>
             <!-- 14 End -->
 
+                 <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-7">
+<pre>
+<code class="SQL">
+from ContentTypeHandlerInput source, UnsafeDeserializationSink sink
+where source.flowsTo(sink)
+select source, sink
+
+</code>
+</pre>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div><br>
+
+
+
             <!-- /.container-fluid -->
 
         </div>
