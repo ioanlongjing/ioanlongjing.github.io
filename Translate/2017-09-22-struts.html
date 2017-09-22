@@ -392,6 +392,20 @@ class ContentTypeHandlerInput extends FlowSource
                     </div>
                 </div>
             <!-- 13 End -->
+            <!-- 14        -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="lead">
+                            Now that we have the definition for a dataflow source, we can look for places where this tainted data is used in an unsafe deserialization method. We don't have to define that method (the sink) ourselves as it is already in the Deserialization of user-controlled data query (line 64: UnsafeDeserializationSink, we will need to copy its definition into the query console). Using this, our final query becomes:
+                        </p>
+                    </div>
+                     <div class="col-lg-6">
+                        <p class="lead">
+                            現在我們已經有了一串 dataflow source ，我們可以看到被污染的反序列化資料。我們沒有辦法預設這個 mothod (在這 sink)，因為他已經在 User 控制的 query 裡 (第 64 行 UnsafeDeserializationSink 中, 我們可以進到這 query console 複製這個定義)。利用這點，我們最終的 query 變成 : 
+                        </p>
+                    </div>
+                </div>
+            <!-- 14 End -->
 
             <!-- /.container-fluid -->
 
