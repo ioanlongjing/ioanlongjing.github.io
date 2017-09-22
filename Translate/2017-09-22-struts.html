@@ -142,8 +142,8 @@
             <!-- 1 End -->
 
             <!-- 2        -->
-                    <div class="row">
-                        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
                         <p class="lead">
                             We strongly advise users of Struts to upgrade to the latest version to mitigate this security risk.
                         </p>
@@ -156,8 +156,8 @@
                 </div>
             <!-- 2 End -->
             <!-- 3        -->
-                    <div class="row">
-                        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
                         <p class="lead">
                             The vulnerability I discovered is a result of unsafe deserialization in Java. Multiple similar vulnerabilities have come to light in recent years, after Chris Frohoff and Gabriel Lawrence discovered a deserialization flaw in Apache Commons Collections that can lead to arbitrary code execution. Many Java applications have since been affected by such vulnerabilities. If you'd like to know more about this type of vulnerability, the lgtm documentation page on this topic is a good place to start.
                         </p>
@@ -170,8 +170,8 @@
                 </div>
             <!-- 3 End -->
             <!-- 4        -->
-                    <div class="row">
-                        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
                         <p class="lead">
                             Detecting unsafe deserialization in Struts
                         </p>
@@ -184,8 +184,8 @@
                 </div>
             <!-- 4 End -->
             <!-- 5        -->
-                    <div class="row">
-                        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
                         <p class="lead">
                             lgtm identifies alerts in code using queries written in a specially-designed language: QL. One of the many queries for Java detects potentially unsafe deserialization of user-controlled data. The query identifies situations in which unsanitized data is deserialized into a Java object. This includes data that comes from an HTTP request or from any other socket connection.
                         </p>
@@ -198,8 +198,8 @@
                 </div>
             <!-- 5 End -->
             <!-- 6        -->
-                    <div class="row">
-                        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
                         <p class="lead">
                             This query detects common ways through which user-controlled data flows to a deserialization method. However, some projects use a slightly different approach to receive remote user input. For example, Apache Struts uses the ContentTypeHandler interface. This converts data into Java objects. Since implementations of this interface usually deserialize the data passed to them, every class that implements this interface is potentially of interest. The standard QL query for detecting unsafe deserialization of user-controlled data can easily be adapted to recognize this additional method for processing user input. This is done by defining a custom data source.
                         </p>
@@ -211,7 +211,47 @@
                     </div>
                 </div>
             <!-- 6 End -->
+            <!-- 7        -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="lead">
+                            In this case, we are interested in data flowing from the toObject method, which is defined in the ContentTypeHandler interface:
+                        </p>
+                    </div>
+                     <div class="col-lg-6">
+                        <p class="lead">
+                            這個種情況下，我們對於來自於 toObject 這個 method 流過來的資料，可以定義出 ContentTypeHandler 這個 interface :
+                        </p>
+                    </div>
+                </div>
+            <!-- 7 End -->
+                 <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-7">
+<pre>
+<code class="Java">
+void toObject(Reader in, Object target);
 
+</code>
+</pre>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div><br>
+
+            <!-- 8        -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="lead">
+                            The data contained in the first argument in that is passed to toObject should be considered tainted: it is under the control of a remote user and should not be trusted. We want to find places where this tainted data (the source) flows into a deserialization method (a sink) without input validation or sanitization.
+                        </p>
+                    </div>
+                     <div class="col-lg-6">
+                        <p class="lead">
+                            這個傳到 toObject 的第一個參數可能是有問題的 ：由於這資料是自於一個遠端的 user ，所以不應該被信任。我們希望可以找到一個可以不會被驗證或過濾的地方，讓我們改成有問題得反序列化資料。
+                        </p>
+                    </div>
+                </div>
+            <!-- 8 End -->
             <!-- /.container-fluid -->
 
         </div>
