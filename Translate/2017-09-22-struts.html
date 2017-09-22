@@ -225,6 +225,7 @@
                     </div>
                 </div>
             <!-- 7 End -->
+
                  <div class="row">
                     <div class="col-lg-2"></div>
                     <div class="col-lg-7">
@@ -266,7 +267,21 @@ void toObject(Reader in, Object target);
                         </p>
                     </div>
                 </div>
-            <!-- 9 End -->            
+            <!-- 9 End --> 
+
+                 <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-7">
+<pre>
+<code class="Java">
+IOUtils.copy(remoteUserInput, output);   // output is now also tainted because the function copy preserves the data.
+
+</code>
+</pre>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div><br>
+
             <!-- /.container-fluid -->
 
         </div>
