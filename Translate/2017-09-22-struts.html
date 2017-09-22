@@ -356,6 +356,29 @@ class ToObjectDeserializer extends Method
                     </div>
                 </div>
             <!-- 12 End -->
+
+                 <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-7">
+<pre>
+<code class="Java">
+/** Mark the first argument of `toObject` as a dataflow source **/
+class ContentTypeHandlerInput extends FlowSource 
+{
+  ContentTypeHandlerInput() 
+  {
+    exists(ToObjectDeserializer des |
+      des.getParameter(0).getAnAccess() = this
+    )
+  }
+}
+
+</code>
+</pre>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div><br>
+
             <!-- /.container-fluid -->
 
         </div>
