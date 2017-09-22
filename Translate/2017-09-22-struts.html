@@ -379,6 +379,20 @@ class ContentTypeHandlerInput extends FlowSource
                     <div class="col-lg-3"></div>
                 </div><br>
 
+            <!-- 13        -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="lead">
+                            Intuitively, this definition says that any access to the first parameter of a toObject method, as captured by ToObjectDeserializer above, is a flow source. Note that for technical reasons, flow sources have to be expressions. Therefore, we identify all accesses of that parameter (which are expressions) as sources, rather than the parameter itself (which isn't).                        </p>
+                    </div>
+                     <div class="col-lg-6">
+                        <p class="lead">
+                            直覺上，這個定義第一個任何藉由 toObject 的 method 來的資料都是 flow source。請注意，由於技術上的需求，flow sources 必須是 expression。所以我們應該將所有來自於這個參數的 access (這邊是 expression) 都當成來源，而不是這個參數自己而已（這不是 expressions） 。
+                        </p>
+                    </div>
+                </div>
+            <!-- 13 End -->
+
             <!-- /.container-fluid -->
 
         </div>
