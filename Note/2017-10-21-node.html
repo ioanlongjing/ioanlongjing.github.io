@@ -128,11 +128,33 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | b
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
             </code></pre>            
                         <p class="lead">
-                        這腳本會 clone 一份到 .nvm 中, 然後會新增到自己的 profile 中 (~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc)
+                        這會 clone 一份到 .nvm 中, 然後會新增到自己的 profile 中 (~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc)<br>
+                        內容為..
                         </p>
                     </div>
                 </div>
+            <pre><code class="bash">
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
+            </code></pre> 
+                        <p class="lead">
+                        如果不確定我們有沒有成功在 nvm 上安裝可以嘗試看看
+                        </p>
+            <pre><code class="bash">
+$ command -v nvm
+nvm
+            </code></pre> 
+                        <p class="lead">
+                        當成功安裝完那包得 nvm 後, 我們可以用這個 nvm 安裝
+                        </p>
+            <pre><code class="bash">
+nvm install node
+            </code></pre>
+                        <p class="lead">
+                        接者我們在任何 shell 上, 都可以用到這個新版本
+                        </p>
+                        
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
