@@ -109,15 +109,26 @@
                         <h1 class="page-header">
                             [ Note ] 在 Ubuntu 上 install node 8.7.0
                         </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p class="lead"> 
-                            因為最近剛好在學 node.js, 但我們用超強的 apt-get install 
-                            後, 版本是 4.2.6 ... <br>
-                            現在都到 8.7.X 惹 QQ <br>
-                            於是找了很久, 終於讓找到方法了, 為了怕記憶力不好, 忘記力更強, 所以來筆記一下
+                        <p class="lead">
+                        因為最近剛好在學 node.js, 但我們用超強的 apt-get install 後, 版本是 4.2.6 ... <br>
+                        現在都到 8.7.X 惹 QQ <br>
+                        於是找了很久, 終於讓找到方法了, 為了怕記憶力不好, 忘記力更強, 所以來筆記一下
+                        </p><br>
+                        <p class="lead">
+                        首先我們先 install 跟 updata 一下 npm <br>
+                        可以用 curl 先下載跟用 bash 
+                        </p>
+            <pre><code class="bash">
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+            </code></pre>
+                        <p class="lead">
+                        或著如果你沒有裝 curl 也可以用 wget
+                        </p>
+            <pre><code class="bash">
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+            </code></pre>            
+                        <p class="lead">
+                        這腳本會 clone 一份到 .nvm 中, 然後會新增到自己的 profile 中 (~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc)
                         </p>
                     </div>
                 </div>
