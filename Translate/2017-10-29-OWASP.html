@@ -182,6 +182,35 @@
                     </div>
                  </div>
                 <!-- 3 End -->
+                <!-- 4        -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="lead">
+                            <h2>Am I Vulnerable to Injection?</h2>
+                            An application is vulnerable to attack when:
+                            <ul>
+                                <li>User supplied data is not validated, filtered or sanitized by the application.</li>
+                                <li>Hostile data is used directly with dynamic queries or non- parameterized calls for the interpreter without context-aware escaping.</li>
+                                <li>Hostile data is used within ORM search parameters such that the search evaluates out to include sensitive or all records.</li>
+                                <li>Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or in stored procedures.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p  class="lead">
+                            <h2>我有 Injection 的漏洞嗎? </h2>
+                            當 application 容易被攻擊時:
+                            <ul>
+                                <li>使用者提供資料時, application 沒有被過濾或 sanitized 過.</li>
+                                <li>惡意的資料直接使用直譯的動態查詢或是沒有參數話的查詢，沒有被轉譯過.</li>
+                                <li>惡意的資料用 ORM 的參數查詢, 導致收尋執行的結果有敏感資料</li>
+                                <li>惡意的資料被直接使用或連接, 讓 SQL 或 command 的內容同時包含正常結構跟惡意資料在動態語句裡, command 或是存進資料庫時</li>
+                            </ul>
+                        </p>
+                    </div>
+                 </div>
+                <!-- 4 End -->
+
 
             </div>
         </div>
