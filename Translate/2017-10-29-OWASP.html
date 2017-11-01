@@ -245,9 +245,9 @@
                             如果想被面被注入, 需要將 Data 跟指令分開查詢.
                             <ul>
                                 <li>比較好的方式是使用安全的 API 避免直接碰到編譯器或參數的介面.<br>
-                                    註記: 在使用儲存過程中, PL/SQL 或 T-SQL 仍有可能被 SQL  Injection, 或者執行到惡意的 IMMEDIATE 或 exec() 指令.
+                                    註記: 在使用儲存過程中, PL/SQL 或 T-SQL 仍有可能被 SQL  Injection, 或者執行到惡意的 IMMEDIATE 或 exec() .
                                 </li>
-                                <li>.</li>
+                                <li>可以考慮正向表列或白名單驗證, 但這不是完全解決問題的方式, 因為許多的 application require 時會用到許多特殊字元, 例如 text areas 或是行動裝置的上 application 的 API.</li>
                                 <li></li>
                                 <li下</li>
                             </ul>
