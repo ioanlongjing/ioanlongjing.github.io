@@ -248,8 +248,9 @@
                                     註記: 在使用儲存過程中, PL/SQL 或 T-SQL 仍有可能被 SQL  Injection, 或者執行到惡意的 IMMEDIATE 或 exec() .
                                 </li>
                                 <li>可以考慮正向表列或白名單驗證, 但這不是完全解決問題的方式, 因為許多的 application require 時會用到許多特殊字元, 例如 text areas 或是行動裝置的上 application 的 API.</li>
+                                <li>對於任何的動態查詢結果, 必須都針對使用編譯器的特殊字元去做轉譯字元。 OWASP 的 JAVA Encoder 跟類似的函式庫的提供類似的功能。註記：SQL 的結構中 table name 跟 columns name 沒辦法被轉譯, 因此, 由 user 輸入結構的名稱是很危險的。這是寫報告時常見的問題。
+                                    </li>
                                 <li></li>
-                                <li下</li>
                             </ul>
                         </p>
                     </div>
