@@ -257,7 +257,58 @@
                  </div>
 
                 <!-- 6 End -->
-
+                <!-- 7 -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="lead">
+                            <h2>Example Attack Scenarios</h2>
+                            Scenario #1: An application uses untrusted data in the construction of the following <b><font color="ff0000">vulnerable</font></b> SQL call:<br>
+                             
+<pre>
+    <code class="SQL">                            
+String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";
+    </code>
+</pre>
+                            Scenario #2: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL)):<br>
+<pre>
+    <code class="SQL">
+Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
+    </code>
+</pre>
+                            In both cases, the attacker modifies the ‘id’ parameter value in her browser to send: <b><font color="ff0000">' or '1'='1</font></b>. For example:<br>
+<pre>
+    <code class="sql">
+    http://example.com/app/accountView?id=' or '1'='1
+    </code>
+</pre>
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p  class="lead">
+                            <h2>Example Attack Scenarios</h2>
+                            Scenario #1: An application uses untrusted data in the construction of the following <b><font color="ff0000">vulnerable</font></b> SQL call:<br>
+                             
+<pre>
+    <code class="SQL">                            
+String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";
+    </code>
+</pre>
+                            Scenario #2: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL)):<br>
+<pre>
+    <code class="SQL">
+Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
+    </code>
+</pre>
+                            In both cases, the attacker modifies the ‘id’ parameter value in her browser to send: <b><font color="ff0000">' or '1'='1</font></b>. For example:<br>
+<pre>
+    <code class="sql">
+    http://example.com/app/accountView?id=' or '1'='1
+    </code>
+</pre>
+                        </p>
+                    </div>
+                 </div>
+                <!-- 7 End -->
             </div>
         </div>
         <!-- /#wrapper -->
