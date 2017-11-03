@@ -277,8 +277,7 @@ Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.ge
 </pre>
                             In both cases, the attacker modifies the ‘id’ parameter value in her browser to send: <b><font color="ff0000">' or '1'='1</font></b>. For example:<br>
 <pre>
-    <code class="sql">
-    http://example.com/app/accountView?id=' or '1'='1
+    <code class="sql">http://example.com/app/accountView?id=' or '1'='1
     </code>
 </pre>
                         </p>
@@ -302,7 +301,7 @@ Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.ge
                             In both cases, the attacker modifies the ‘id’ parameter value in her browser to send: <b><font color="ff0000">' or '1'='1</font></b>. For example:<br>
 <pre>
     <code class="sql">
-    http://example.com/app/accountView?id=' or '1'='1
+http://example.com/app/accountView?id=' or '1'='1
     </code>
 </pre>
                         </p>
