@@ -114,22 +114,22 @@
                 </div>
                 <!-- /#page-wrapper -->
                 <div class="row">
-                <div class="col-lg-4"></div>
-                <div class="col-lg-4">
-                    <p class="lead">
-                    原文來自 :
-                    <a href="https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010%202017%20RC2%20Final.pdf">OWASP</a> (Github)
-                    </p>
+                <div class="col-lg-12">
+                    <center>
+                        <p class="lead">
+                        原文來自 :
+                        <a href="https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010%202017%20RC2%20Final.pdf">OWASP</a> (Github)
+                        </p>
+                    </center>
                 </div>
-                <div class="col-lg-4"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-1"></div>
-                        <div class="col-lg-10">
+                    <center>
+                        <div class="col-lg-12">
                             <img class="img-thumbnail" src="2017-10-29/top.png" >
                         </div>
-                    <div class="col-lg-1"></div>
+                    </center>
                 </div>
                 <br>
                 <!-- 1        -->
@@ -189,9 +189,9 @@
                             <h2>Am I Vulnerable to Injection?</h2>
                             An application is vulnerable to attack when:
                             <ul>
-                                <li>User supplied data is not validated, filtered or sanitized by the application.</li>
-                                <li>Hostile data is used directly with dynamic queries or non- parameterized calls for the interpreter without context-aware escaping.</li>
-                                <li>Hostile data is used within ORM search parameters such that the search evaluates out to include sensitive or all records.</li>
+                                <li>User supplied data is not validated, filtered or sanitized by the application.</li><br>
+                                <li>Hostile data is used directly with dynamic queries or non- parameterized calls for the interpreter without context-aware escaping.</li><br>
+                                <li>Hostile data is used within ORM search parameters such that the search evaluates out to include sensitive or all records.</li><br>
                                 <li>Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or in stored procedures.</li>
                             </ul>
                         </p>
@@ -199,11 +199,11 @@
                     <div class="col-lg-6">
                         <p  class="lead">
                             <h2>我有 Injection 的漏洞嗎? </h2>
-                            那些 application 容易被攻擊:
+                            哪些 application 容易被攻擊:<br>
                             <ul>
-                                <li>使用者提供資料時, application 沒有被過濾或 sanitized 過.</li>
-                                <li>惡意的資料直接使用直譯的動態查詢或是沒有參數話的查詢，沒有被轉譯過.</li>
-                                <li>惡意的資料用 ORM 的參數查詢, 導致收尋執行的結果有敏感資料</li>
+                                <li>使用者提供資料時, 服務沒有將內容過濾或檢查過.</li> <br>
+                                <li>惡意的資料直接使用直譯的動態查詢或是沒有參數話的查詢，沒有被轉譯過.</li><br>
+                                <li>惡意的資料用 ORM 的參數查詢, 導致執行結果有敏感資料</li><br>
                                 <li>惡意的資料被直接使用或連接, 讓 SQL 或 command 的內容同時包含正常結構跟惡意資料在動態語句裡, command 或是存進資料庫時</li>
                             </ul>
                         </p>
@@ -219,7 +219,7 @@
                     </div>
                     <div class="col-lg-6">
                         <p  class="lead">
-                            一些常見的 injection 包含 SQL, OS command, ORM, LDAP, 跟 Expression 或是 OGNL injection .. 等等。這些技術的概念是相同的。管理者可以把 SAST (Static Application Security Testing, 靜態應用系統安全測試 )跟 DAST (Dynamic Application Security Testing, 動態應用系統安全測試 )的工具包在 CI/CD ( Continuous Integration / Continuous Delivery, 持續性整合與發佈 ) 裡, 讓發布時能加到現有項目中。手動跟自動的 code review 是最容易檢測是否會被 injection 的方式, 包含、所有的 parameters, fields, headers, cookies, JSON, 跟 XML 等可以輸入的資料.
+                            一些常見的 injection 包含 SQL, OS 指令, ORM, LDAP, 跟 Expression 或是 OGNL injection .. 等等。這些技術的概念是相同的。管理者可以把 SAST (Static Application Security Testing, 靜態應用系統安全測試 )跟 DAST (Dynamic Application Security Testing, 動態應用系統安全測試 )的工具包在 CI/CD ( Continuous Integration / Continuous Delivery, 持續性整合與發佈 ) 裡, 讓發布時能加到現有項目中。手動跟自動的 code review 是最容易檢測是否會被 injection 的方式, 包含、所有的 parameters, fields, headers, cookies, JSON, 跟 XML 等可以輸入的資料.
                         </p>
                     </div>
                  </div>
