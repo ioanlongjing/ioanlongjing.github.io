@@ -277,7 +277,8 @@ Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.ge
 </pre>
                             In both cases, the attacker modifies the ‘id’ parameter value in her browser to send: <b><font color="ff0000">' or '1'='1</font></b>. For example:<br>
 <pre>
-    <code class="sql">http://example.com/app/accountView?id=' or '1'='1
+    <code class="sql">
+http://example.com/app/accountView?id=' or '1'='1
     </code>
 </pre>
                         </p>
@@ -297,8 +298,8 @@ String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("i
     <code class="SQL">
 Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
     </code>
-</pre>
-                            In both cases, the attacker modifies the ‘id’ parameter value in her browser to send: <b><font color="ff0000">' or '1'='1</font></b>. For example:<br>
+</pre>   
+                            在這兩種情況下, 攻擊者可以對 'id' 這參數發送 : <b><font color="ff0000">' or '1'='1</font></b>. 就會變成:<br><br>
 <pre>
     <code class="sql">
 http://example.com/app/accountView?id=' or '1'='1
