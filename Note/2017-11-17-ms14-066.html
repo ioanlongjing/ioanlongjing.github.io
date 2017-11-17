@@ -155,7 +155,7 @@
                     <div class="col-lg-12">
                         <p class="lead">
                             據說.. 看起來應該是把目前 work 的部分，指了兩次 memcpy <br>
-                            不過這邊我不太懂，就不要亂講了 （抹臉）<br>
+                            不過這邊我不太懂，就不要亂講了 （抹臉）<br><br>
                             接著去使用了 ProcessHandshake 這 function，之後 create 出了 " Client Verify Message "<br>
                             根據原文作者查詢了 MSDN 中關於 TLS/SSL 的部分後
                         </p><br>
@@ -191,6 +191,11 @@
                         <p class="lead">
                             可是我們在修補此漏洞時一直會發生此 patch 沒辦法執行<br>
                             在經過我們實際架 lab 去測試後才發現，原來此 patch 是有相依性的... (抹臉)<br>
+                            以 Windows 2012 R2 來說, 必須按照順序...<br>
+                            step 1. https://www.microsoft.com/en-us/download/details.aspx?id=42153<br>
+                            step 2. https://www.microsoft.com/en-us/download/details.aspx?id=42334<br>
+                            setp 3. https://www.microsoft.com/en-us/download/details.aspx?id=44643
+
                         </p><br>
                     </div>
                 </div>
