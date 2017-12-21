@@ -202,7 +202,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                             點開後在"系統失敗"( System failure )的 Group 裡，只有無、小記憶體傾印(256KB)、核心記憶體傾印，沒有我們要的"完整記憶體傾印"( Complete Memory Dump )
+                             點開後在"寫入偵錯資訊"( Write debugging information )的 Group 裡，只有無、小記憶體傾印(256KB)、核心記憶體傾印，沒有我們要的"完整記憶體傾印"( Complete Memory Dump )
                         </p>
                     </div>
                 </div>     
@@ -226,7 +226,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            我們先再 Windows 的收尋欄位裡打上 "regedit"，收尋到一個檔案
+                            我們先再 Windows 的收尋欄位裡打上 "regedit"，收尋到 regedit ，直接點選
                         </p>
                     </div>
                 </div>  
@@ -258,7 +258,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead">
-                            會有 UAC 確認我們是不是真得是我們點選，直接按下確定即可
+                            接著到 \HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl\<br>
+                            的 CrashDumpEnabled 將 <font color="red">2</font> 改成 <font color="blue">1</font>
                         </p>
                     </div>
                 </div>  
@@ -267,6 +268,31 @@
                     <div class="col-lg-6">
                         <center>
                             <img width="60%" height="60%" src="2017-12-21/09.png" />
+                        </center>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <center>
+                            <img width="60%" height="60%" src="2017-12-21/10.png" />
+                        </center>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            這時我們再回到"啟動及修復"( Startup and Recovery )"裡，就會出現"完整記憶體傾印"( Complete Memory Dump) 的選項
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <center>
+                            <img width="60%" height="60%" src="2017-12-21/11.png" />
                         </center>
                     </div>
                     <div class="col-lg-3"></div>
