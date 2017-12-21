@@ -344,6 +344,18 @@
                         </p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            接下來找一個鍵盤接上去，接著修改 regedit<br>
+                            修改的 regedit 會因為接的接頭不同，要改的位置也不一樣<br>
+                            PS2 : HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\i8042prt\Parameters<br>
+                            USB :HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\kbdhid\Parameters<br>
+                            接著兩個都一樣 ， create 一個值，取名叫 CrashOnCtrlScroll ， 將 REG_DWORD 的直設成 0x01<br>
+                            再來要重開機，設定才會生效
+                        </p>
+                    </div>
+                </div>
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
