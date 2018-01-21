@@ -98,7 +98,7 @@
                                         <i class="fa fa-fw fa-file"></i>  <a href="../Translate.html">Translate</a>
                                     </li>
                                     <li class="active">
-                                        OSWASP 2017 A1 - Injection
+                                        OSWASP 2017 A2 - Broken Authentication
                                     </li>
                                 </ol>
                             </div>
@@ -108,7 +108,7 @@
                 <div class="row">
                     <div class="jumbotron">
                     <h2 class="page-header">
-                        <center>OWASP TOP 10 A1 - Injection </center>
+                        <center>OWASP TOP 10 A2 - Broken Authentication</center>
                     </h2>
                     </div>
                 </div>
@@ -124,191 +124,7 @@
                 </div>
                 </div>
 
-                <div class="row">
-                    <center>
-                        <div class="col-lg-12">
-                            <img class="img-thumbnail" src="2017-10-29/top.png" >
-                        </div>
-                    </center>
-                </div>
-                <br>
-                <!-- 1        -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p class="lead">
-                            Almost any source of data can be an injection vector, including users, parameters, external and internal web services, and all types of users. Injection flaws occur when an attacker can send hostile data to an interpreter.                 
-                        </p>
-                    </div>
-                    <div class="col-lg-6">
-                        <p  class="lead">
-                            幾乎任何來源都可以被當成 injection vector, 包含 users, parameters, 外部跟內部的 web server 跟所有類型的 users。當 Injection 的漏洞被攻擊者發現傳送惡意的資料時。
-                        </p>
-                    </div>
-                 </div>
-                <!-- 1 End -->
-                <!-- 2        -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p class="lead">
-                            Injection flaws are very prevalent, particularly in legacy code. They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, ORM queries.
 
-                            Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws.                  
-                        </p>
-                    </div>
-                    <div class="col-lg-6">
-                        <p  class="lead">
-                            Injection 的漏洞非常流行, 尤其是老舊的程式碼。他們常常在 SQL 中的 LDAP, XPath, 或著 NoSQL 的 queries 被找到; OS commands; XML parsers, SMTP Headers, expression languages, ORM queries.
-                            
-                            Injection 非常容易被檢查到。 Scanners 跟 fuzzers 都可以幫攻擊者找到 Injection 漏洞.
-                        </p>
-                    </div>
-                 </div>
-                <!-- 2 End -->
-                <!-- 3        -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p class="lead">
-                            Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover.
-
-                            The business impact depends on the protection needs of your application and data.                   
-                        </p>
-                    </div>
-                    <div class="col-lg-6">
-                        <p  class="lead">
-                            Injection 可能會導致資料遺失或損毀, 權限錯誤或是帳號被 denial 掉。 Injection 有可能造成整個主機被黑客拿下。
-                            
-                            對商業的影響, 取決於你的應用程式跟儲存的資料
-                        </p>
-                    </div>
-                 </div>
-                <!-- 3 End -->
-                <!-- 4        -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p class="lead">
-                            <h2>Am I Vulnerable to Injection?</h2>
-                            An application is vulnerable to attack when:
-                            <ul>
-                                <li>User supplied data is not validated, filtered or sanitized by the application.</li><br>
-                                <li>Hostile data is used directly with dynamic queries or non- parameterized calls for the interpreter without context-aware escaping.</li><br>
-                                <li>Hostile data is used within ORM search parameters such that the search evaluates out to include sensitive or all records.</li><br>
-                                <li>Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or in stored procedures.</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="col-lg-6">
-                        <p  class="lead">
-                            <h2>我有 Injection 的漏洞嗎? </h2>
-                            哪些 application 容易被攻擊:<br>
-                            <ul>
-                                <li>使用者提供資料時, 服務沒有將內容過濾或檢查過.</li> <br>
-                                <li>惡意的資料直接使用直譯的動態查詢或是沒有參數話的查詢，沒有被轉譯過.</li><br>
-                                <li>惡意的資料用 ORM 的參數查詢, 導致執行結果有敏感資料</li><br>
-                                <li>惡意的資料被直接使用或連接, 讓 SQL 或 command 的內容同時包含正常結構跟惡意資料在動態語句裡, command 或是存進資料庫時</li>
-                            </ul>
-                        </p>
-                    </div>
-                 </div>
-                <!-- 4 End -->
-                <!-- 5     -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p class="lead">
-                            Some of the more common injections are SQL, OS command, ORM, LDAP, and Expression Language (EL) or OGNL injection.. The concept is identical between all interpreters. Organizations can include SAST and DAST tooling into the CI/CD pipeline to alert if existing or newly checked in code has injection prior to production deployment. Manual and automated source code review is the best method of detecting if you are vulnerable to injections, closely followed by thorough DAST scans of all parameters, fields, headers, cookies, JSON, and XML data inputs.                   
-                        </p>
-                    </div>
-                    <div class="col-lg-6">
-                        <p  class="lead">
-                            一些常見的 injection 包含 SQL, OS 指令, ORM, LDAP, 跟 Expression 或是 OGNL injection .. 等等。這些技術的概念是相同的。管理者可以把 SAST (Static Application Security Testing, 靜態應用系統安全測試 )跟 DAST (Dynamic Application Security Testing, 動態應用系統安全測試 )的工具包在 CI/CD ( Continuous Integration / Continuous Delivery, 持續性整合與發佈 ) 裡, 讓發布時能加到現有項目中。手動跟自動的 code review 是最容易檢測是否會被 injection 的方式, 包含、所有的 parameters, fields, headers, cookies, JSON, 跟 XML 等可以輸入的資料.
-                        </p>
-                    </div>
-                 </div>
-                <!-- 5 End -->
-                <!-- 6     -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p class="lead">
-                            <h2>How Do I Prevent Injection?</h2>
-                            Preventing injection requires keeping data separate from commands and queries.
-                            <ul>
-                                <li>The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface, or migrate to use ORMs or Entity Framework.<br>
-                                    NB: When parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec().</li>
-                                <li>Positive or "white list" input validation, but this is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications</li>
-                                <li>For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. OWASP's Java Encoder and similar libraries provide such escaping routines. NB: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report writing software.</li>
-                                <li>Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="col-lg-6">
-                        <p  class="lead">
-                            <h2>如何能讓我避免被 Injection</h2>
-                            如果想被面被注入, 需要將 Data 跟指令分開查詢.
-                            <ul>
-                                <li>比較好的方式是使用安全的 API 避免直接碰到編譯器或參數的介面.<br>
-                                    註記: 在使用儲存過程中, PL/SQL 或 T-SQL 仍有可能被 SQL  Injection, 或者執行到惡意的 IMMEDIATE 或 exec() .
-                                </li>
-                                <li>可以考慮正向表列或白名單驗證, 但這不是完全解決問題的方式, 因為許多的 application require 時會用到許多特殊字元, 例如 text areas 或是行動裝置的上 application 的 API.</li>
-                                <li>對於任何的動態查詢結果, 必須都針對使用編譯器的特殊字元去做轉譯字元。 OWASP 的 JAVA Encoder 跟類似的函式庫的提供類似的功能。註記：SQL 的結構中 table name 跟 columns name 沒辦法被轉譯, 因此, 由 user 輸入結構的名稱是很危險的。這是寫報告時常見的問題。
-                                    </li>
-                                <li>在防禦 SQL Injection 的情形下, 使用 LIMIT 跟其他 SQL 控制的指令來防止被大量洩漏資訊</li>
-                            </ul>
-                        </p>
-                    </div>
-                 </div>
-
-                <!-- 6 End -->
-                <!-- 7 -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p class="lead">
-                            <h2>Example Attack Scenarios</h2>
-                            Scenario #1: An application uses untrusted data in the construction of the following <b><font color="ff0000">vulnerable</font></b> SQL call:<br>
-                             
-<pre>
-    <code class="SQL">                            
-String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";
-    </code>
-</pre>
-                            Scenario #2: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL)):<br>
-<pre>
-    <code class="SQL">
-Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
-    </code>
-</pre>
-                            In both cases, the attacker modifies the ‘id’ parameter value in her browser to send: <b><font color="ff0000">' or '1'='1</font></b>. For example:<br>
-<pre>
-    <code class="sql">
-http://example.com/app/accountView?id=' or '1'='1
-    </code>
-</pre>
-                        </p>
-                    </div>
-                    <div class="col-lg-6">
-                        <p  class="lead">
-                            <h2>攻擊範例</h2>
-                            舉例 #1 : 此項服務有 <b><font color="ff0000">弱點</font></b> 的不安全 SQL Call:<br>
-                             
-<pre>
-    <code class="SQL">                            
-String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";
-    </code>
-</pre>
-                            舉例 #2 : 在此範例中, 此服務太過相信 framework 吐出的結果, 這邊是有個導致弱點的查詢 (例如 : Hibernate Query Language (HQL))<br>
-<pre>
-    <code class="SQL">
-Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
-    </code>
-</pre>   
-                            在這兩種情況下, 攻擊者可以對 'id' 這參數發送 : <b><font color="ff0000">' or '1'='1</font></b>. 就會變成:<br>
-<pre>
-    <code class="sql">
-http://example.com/app/accountView?id=' or '1'='1
-    </code>
-</pre>
-                        </p>
-                    </div>
-                 </div>
-                <!-- 7 End -->
             </div>
         </div>
         <!-- /#wrapper -->
