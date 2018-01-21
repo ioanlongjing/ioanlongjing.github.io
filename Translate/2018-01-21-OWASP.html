@@ -220,13 +220,13 @@
                         <p  class="lead">
                             <h2>我該如何保護？</h2>
                             <ul>
-                                <li>不要使用任何預設證書或配置，特別是 admin 的使用者</li> <br>
+                                <li>不要使用任何預設驗證或配置，特別是具有管理員身份的使用者</li> <br>
                                 <li>密碼使用單向不可逆的演算法，例如 Argon2 或 PBKDF2 並有足夠的加密因數，來保護被 GPU 破解</li><br>
                                 <li>執行弱密碼確認，比如根據最新的 1000 個最差密碼測試表</li><br>
                                 <li>參考 NUST 800-63 guidelines 的密碼長度、複雜度、資料保存政策 （ 5.1.1 節的 Memorized Secrets or other modern, evidence based password policies ）</li><br>
                                 <li>確保註冊、驗證恢復跟 API 的路徑可以相同的訊息來源，可以阻擋暴力列舉攻擊</li><br>
                                 <li>在可能得情況下，用多重因素驗證，來防止 credential stuffing, brute force, automated, 跟 stolen credential attacks</li><br>
-                                <li>將記錄失敗登入，並在發現 credential stuffing 或 brute force 的時候通知管理員</li>
+                                <li>將記錄失敗登入，並在發現密碼填充或暴力破解的時候通知管理員</li>
                             </ul>
                         </p>
                     </div>
