@@ -188,8 +188,7 @@
                                 <li>Are any old or weak cryptographic algorithms used either by default or in older code? (see A6:2017 Security Misconfiguration)</li>
                                 <li>Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?</li>
                                 <li>Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
-
-                                see ASVS areas Crypto (V7), Data Prot (V9) and SSL/TLS (V10) (https://www.owasp.org/index.php/ASVS</li>
+                                    see <a href="https://www.owasp.org/index.php/ASVS" target="_blank" rel="noopener noreferrer">ASVS areas Crypto (V7), Data Prot (V9) and SSL/TLS (V10)</a></li>
                             </ul>
                         </p>
                     </div>
@@ -198,7 +197,22 @@
                             <h2>我有資訊洩露的問題嗎？</h2>
                             第一件事是確保在傳輸的過程中需要被保護。例如密碼、信用卡號碼、健康紀錄跟個人資訊都需要額外的保護，尤其如果資料是屬於歐盟的 GDPR ( General Data Protection Regulation )、關於所在地隱私法規或法條、金融資訊保護法條，例如 PCI Data Security Standard ( PCI DSS )、 或是健康資訊的法律，例如 Portability Act ( HIIPA )。對於這些資料:<br>
                             <ul>
-                                <li></li><br>
+                                <li>
+                                    任何在網站上的明文資料是屬於內網還是外網？網路傳輸中的資料是特別危險的，但是進到從負載平衡到網頁伺服器上或是從伺服器到後端也是可能有問題的
+                                </li>
+                                <li>
+                                    敏感資料是否已明碼儲存？那備份呢？
+                                </li>
+                                <li>
+                                    有任何舊或是比較弱的加密法，使用在預設比較舊的 code 中？（可以參考 A6:2017 Security Misconfiguration） 
+                                </li>
+                                <li>
+                                    是否使用預設的金鑰？使否使用了預設的金鑰？或是正確的金鑰有被好好管理或是遺失了？
+                                </li>
+                                <li>
+                                    加密有沒有被強制執行？有沒有任何 user agent 的 security directives 或 headers 遺漏? （可以參考 <a href="https://www.owasp.org/index.php/ASVS" target="_blank" rel="noopener noreferrer">ASVS areas Crypto (V7), Data Prot (V9) and SSL/TLS (V10)</a> ）
+                                    
+                                </li>
                             </ul>
                         </p>
                     </div>
