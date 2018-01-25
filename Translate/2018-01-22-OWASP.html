@@ -218,6 +218,63 @@
                     </div>
                  </div>
                 <!-- 4 End -->
+                <!-- 5        -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="lead">
+                            <h2>How Do I Prevent This?</h2>
+                            Do the following, at a minimum and consult the references:<br>
+                            <ul>
+                                <li>Classify data processed, stored or transmitted by a system.
+                                Apply controls as per the classification.</li>
+                                <li>Review the privacy laws or regulations applicable to sensitive data, and protect as per regulatory requirements.</li>
+                                <li>Don’t store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data you don’t retain can’t be stolen.</li>
+                                <li>Make sure you encrypt all sensitive data at rest</li>
+                                <li>Encrypt all data in transit, such as using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS).</li>
+                                <li>Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using crypto modules.</li>
+                                <li>Ensure passwords are stored with a strong adaptive algorithm appropriate for password protection, such as Argon2, scrypt, bcrypt and PBKDF2. Configure the work factor (delay factor) as high as you can tolerate.</li>
+                                <li>Disable caching for response that contain sensitive data.</li>
+                                <li>Verify independently the effectiveness of your settings.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p  class="lead">
+                            <h2>我該如何避免此問題嗎？</h2>
+                            至少看這篇清單，參考這些動作：<br>
+                            <ul>
+                                <li>
+                                    對系統的 processed、stored 跟 transmitted 分類。
+                                </li><br>
+                                <li>
+                                    對敏感資訊參考適用法規或法律，並按照規則進行保存。
+                                </li><br>
+                                <li>
+                                    不儲存不需要的敏感資訊。盡快丟掉或者符合 PCI DSS 的標準格式化甚至銷毀。
+                                </li><br>
+                                <li>
+                                    確認所有加密的資料都會被重置。
+                                </li><br>
+                                <li>
+                                    加密所有傳輸中的數據，例如使用 TLS （ 例如 HTTP Strict Transport Security : HSTS ），並強致執行。 
+                                </li><br>
+                                <li>
+                                    使用最新、最強的標準演算法、驗證碼、參數、協定跟密鑰，並作適當的密鑰管理。考慮使用加密模組。
+                                </li><br>
+                                <li>
+                                    確保密碼會在適合保護密碼的強大演算法中，例如 Argon2, scrypt, bcrypt 跟 PBKDF2。 設定的 work factor (delay factor) 儘可能的提高。
+                                </li><br>
+                                <li>
+                                    敏感的內容禁止在 response 裡使用 caching 儲存。
+                                </li><br>
+                                <li>
+                                    把驗證的設定，你自己獨立一個設定檔
+                                </li><br>
+                            </ul>
+                        </p>
+                    </div>
+                 </div>
+                <!-- 5 End -->
             </div>
         </div>
         <!-- /#wrapper -->
