@@ -275,6 +275,34 @@
                     </div>
                  </div>
                 <!-- 5 End -->
+                <!-- 6        -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="lead">
+                            <h2>Example Attack Scenarios</h2><br>
+                            <br>
+                            Scenario #1: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text.<br>
+                            <br>
+                            Scenario #2: A site doesn't use or enforce TLS for all pages, or if it supports weak encryption. An attacker simply monitors network traffic, strips or intercepts the TLS (like an open wireless network), and steals the user's session cookie.<br>
+                            The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above he could alter all transported data, e.g. the recipient of a money transfer.<br>
+                            <br>
+                           Scenario #3: The password database uses unsalted hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All the unsalted hashes can be exposed with a rainbow table of pre-calculated hashes.           
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p  class="lead">
+                            <h2>攻擊情境範例</h2><br>
+                            <br>
+                            情境 #1: 應用程式會加密在資料庫中的信用卡卡號。然而這些資料在查詢時會自動解密，導致在 SQL Injection 中會以明文呈現的。<br><br>
+                            <br>
+                            情境 #2: 網站不使用無加密或強制使用 TLS 在所有頁面，如果網站是較弱的演算法，攻擊者只要監控整個流量，就可以猜出或擷取 TLS （像是開放的無線網路）來竊取使用者的 Cookie。<br>
+                            然後攻擊者將 Cookie 匯入並劫持掉 Session (認證過的)，並登入或修改使用者資訊。他可以改變所有傳輸的資訊，例如匯款人的資訊。 <br><br>
+                            <br>
+                            情境 #3: 密碼的資料庫在每個人的密碼中，使用沒有加過鹽的 hashes 。當有一個漏洞上傳的攻擊者可以查詢整個資量庫，所有沒有經過加鹽的密碼，都可以被算好的彩虹表查詢到。
+                        </p>
+                    </div>
+                 </div>
+                <!-- 6 End -->
             </div>
         </div>
         <!-- /#wrapper -->
