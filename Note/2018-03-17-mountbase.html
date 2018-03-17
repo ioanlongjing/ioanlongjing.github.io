@@ -163,6 +163,30 @@
                         </center>
                     </div>
                 </div><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            之後我們用 sudo fdisk -l /dev/sdb 看一下剛剛的硬碟，應該會出現像這樣的訊息                      
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+            <pre><code class="bash">
+$ sudo fdisk -l /dev/sdb
+Disk /dev/sdb: 200 GiB, 214748364800 bytes, 419430400 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xef03cdec
+
+所用裝置   可開機 Start    結束    磁區  Size Id 類型
+/dev/sdb1          2048 419430399 419428352  200G 83 Linux
+            </code></pre>
+                    </div>
+                </div>
+
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
