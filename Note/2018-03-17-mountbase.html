@@ -200,6 +200,23 @@ sudo mount -t ext4 /dev/sdb1 /home/ioan/DB/
             </code></pre>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            好惹，由於這顆目錄的 own 跟 group 都是屬於 root<br>
+                            我們這邊改一下 DB 這資料夾的 own 跟 group                      
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+            <pre><code class="bash">
+ioan@test:~$ sudo chown ioan DB
+
+ioan@test:~$ sudo chgrp ioan DB            
+            </code></pre>
+                    </div>
+                </div>
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
