@@ -228,23 +228,38 @@ ioan@test:~$ sudo chgrp ioan DB
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-10">
             <pre><code class="bash">
-            # /etc/fstab: static file system information.
-            #
-            # Use 'blkid' to print the universally unique identifier for a
-            # device; this may be used with UUID= as a more robust way to name devices
-            # that works even if disks are added and removed. See fstab(5).
-            #
-            # <file system> <mount point>   <type>  <options>       <dump>  <pass>
-            # / was on /dev/sda1 during installation
-            UUID=04b5fc7a-cf0e-468f-92d0-f01ae4c0f651 /               ext4    errors=remount-ro 0       1
-            # swap was on /dev/sda5 during installation
-            UUID=d09948de-571c-4816-84d7-b391079e0b5d none            swap    sw              0       0            
+    # /etc/fstab: static file system information.
+    #
+    # Use 'blkid' to print the universally unique identifier for a
+    # device; this may be used with UUID= as a more robust way to name devices
+    # that works even if disks are added and removed. See fstab(5).
+    #
+    # <file system> <mount point>   <type>  <options>       <dump>  <pass>
+    # / was on /dev/sda1 during installation
+    UUID=04b5fc7a-cf0e-468f-92d0-f01ae4c0f651 /               ext4    errors=remount-ro 0       1
+    # swap was on /dev/sda5 during installation
+    UUID=d09948de-571c-4816-84d7-b391079e0b5d none            swap    sw              0       0            
             </code></pre>
                     </div>
                 </div>
-
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            我們到 /dev/disk/by-uuid/ 看一下我們 uuid 的編號
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+            <pre><code class="bash">
+            lrwxrwxrwx 1 root root 10 Feb 28 17:26 04b5fc7a-cf0e-468f-92d0-f01ae4c0f651 -> ../../sda1
+            lrwxrwxrwx 1 root root 10 Feb 28 17:26 cdcde704-89cc-451b-ba1b-e9d6264efedc -> ../../sdb1
+            lrwxrwxrwx 1 root root 10 Feb 28 17:26 d09948de-571c-4816-84d7-b391079e0b5d -> ../../sda5          
+            </code></pre>
+                    </div>
+                </div>
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
