@@ -105,7 +105,175 @@
                         </div>
                     <!-- The conetext header bar start -->
                     <!-- The web context start -->
+                    <div class="row">
+                        <center>
+                            <div class="col-lg-12">
+                                <img class="img-thumbnail" src="2018-05-09/1.png" >
+                            </div>
+                        </center>
+                    </div>
+                    <div class="row">
+                    <div class="col-lg-12">
+                        <center>
+                            <p class="lead">
+                            原文來自 :
+                            <a href=""
+                            ">thehackernews.com</a>
+                            </p>
+                        </center>
+                    </div>
+                    <!-- 1 -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="lead">
+                                Security researchers revealed a way around that some hacking groups have been found using in the wild to bypass a security feature of Microsoft Office 365, which is originally designed to protect users from malware and phishing attacks.                   
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p  class="lead">
+                                
+                            </p>
+                        </div>
+                     </div>
+                    <!-- 2 -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="lead">
+                                Dubbed Safe Links, the feature has been included in Office 365 software as part of Microsoft's Advanced Threat Protection (ATP) solution that works by replacing all URLs in an incoming email with Microsoft-owned secure URLs.                  
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p  class="lead">
+                                
+                            </p>
+                        </div>
+                     </div>
+                    <!-- 3 -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="lead">
+                                So, every time a user clicks on a link provided in an email, it first sends the user to a Microsoft owned domain, where the company immediately checks the original URL for anything suspicious. If Microsoft's scanners detect any malicious element, it then warns users about it, and if not, it redirects the user to the original link.                   
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p  class="lead">
+                                
+                            </p>
+                        </div>
+                     </div>
+                    <!-- 4 -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="lead">
+                                However, researchers at cloud security company Avanan have revealed how attackers have been bypassing the Safe Links feature by using a technique called, "baseStriker attack."                   
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p  class="lead">
+                                
+                            </p>
+                        </div>
+                     </div>
+                    <!-- 5 -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="lead">
+                                BaseStriker attack involves using the <base> tag in the header of an HTML email—which is used to defines a default base URI, or URL, for relative links in a document or web page.                  
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p  class="lead">
+                                
+                            </p>
+                        </div>
+                     </div>
+                    <!-- 6 -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="lead">
+                                In other words, if the <base> URL is defined, then all subsequent relative links will use that URL as a starting point.                  
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p  class="lead">
+                                
+                            </p>
+                        </div>
+                     </div>
+                    <!-- 7 -->
+                    <div class="row">
+                        <center>
+                            <div class="col-lg-12">
+                                <img class="img-thumbnail" src="" >
+                            </div>
+                        </center>
+                    </div>                    
+                    
+                    <!-- 8 -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="lead">
+                                As shown in the above screenshot, the researchers compared HTML code of a traditional phishing email with the one that uses a <base> tag to split up the malicious link in a way that Safe Links fails to identify and replace the partial hyperlink, eventually redirecting victims to the phishing site, when clicked.                  
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p  class="lead">
+                                
+                            </p>
+                        </div>
+                     </div>
+                    
+                    <!-- 9 -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="lead">
+                                Researchers have even provided a video demonstration, which shows the baseStriker attack in action.                
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p  class="lead">
+                                
+                            </p>
+                        </div>
+                     </div>                    
+ 
+                    <!-- 10 -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="lead">
+                                The researchers tested the baseStriker attack against several configurations and found that "anyone using Office 365 in any configuration is vulnerable," be it web-based client, mobile app or desktop application of OutLook.                
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p  class="lead">
+                                
+                            </p>
+                        </div>
+                    </div> 
 
+                    <!-- 11 -->
+                    <div class="row">
+                        <center>
+                            <div class="col-lg-12">
+                                <img class="img-thumbnail" src="" ></img>
+                            </div>
+                        </center>
+                    </div> 
+
+                    <!-- 12 -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="lead">
+                                Proofpoint is also found vulnerable to the baseStriker attack. However, Gmail users and those protecting their Office 365 with Mimecast are not impacted by this issue.                
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p  class="lead">
+                                
+                            </p>
+                        </div>
+                    </div> 
+                   
                     <!-- The web contest ent -->
         <!-- jQuery -->
         <script src="../js/jquery.js"></script>
