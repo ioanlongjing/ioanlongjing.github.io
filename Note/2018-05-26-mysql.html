@@ -127,6 +127,17 @@
                         </p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">
+                            朋友 debug 了很久，但不了解的是為什麼他手動貼都沒有問題，都是程式執行一段時間後才會發生
+                            最後靈光一閃，是不是一句 SQL 裡面的結果太長？ 
+                            於是乎... <font color="blue"> update user set seenlist = '[]';</font><br>
+                            .... 誒 成功了？！<br>
+                            所以是語句太長問題... 
+                        </p>
+                    </div>
+                </div>
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
