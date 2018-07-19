@@ -282,7 +282,53 @@ $ jq '.[] | [ .SiteName , .TWD67Lon , .TWD67Lat ] | tostring '  download.json
                                         <img width="90%" height="90%" src="2018-07-19/05.png" />
                                  </center>
                             </div>
-                </div>   <br>                  
+                </div>   <br>   
+                <div class="row">
+                     <div class="col-lg-12">
+                        <p class="lead">
+                            不過這樣用，實在有點難看，之後要用 shell 處理覺得沒有很現眼<br>
+                            那我們分隔號可不可以用 " -- " ? 
+                        </p>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-lg-8">
+            <pre><code class="bash">
+$ jq '.[] | [ .SiteName , .TWD67Lon , .TWD67Lat ] | join(" -- ")  | tostring '  download.json
+            </code></pre>
+                    </div>
+                </div>   
+  
+                <div class="row">
+                         <div class="col-lg-8">
+                                 <center>
+                                        <img width="90%" height="90%" src="2018-07-19/06.png" />
+                                 </center>
+                            </div>
+                </div>   <br>    
+                <div class="row">
+                     <div class="col-lg-12">
+                        <p class="lead">
+                            由於是字串，那個雙引號 " " 很煩，我可以不可以關掉? <br>
+                            可以，多加一個 -r 就可以了
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-8">
+            <pre><code class="bash">
+$ jq -r '.[] | [ .SiteName , .TWD67Lon , .TWD67Lat ] | join(" -- ")  | tostring '  download.json
+            </code></pre>
+                    </div>
+                </div> 
+                <div class="row">
+                         <div class="col-lg-8">
+                                 <center>
+                                        <img width="90%" height="90%" src="2018-07-19/07.png" />
+                                 </center>
+                            </div>
+                </div>   <br>                
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
