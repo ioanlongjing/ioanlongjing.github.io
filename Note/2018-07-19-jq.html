@@ -220,6 +220,51 @@ $ jq '.[0]' download.json
                                  </center>
                             </div>
                 </div>   <br>
+                <div class="row">
+                     <div class="col-lg-12">
+                        <p class="lead">
+                                那我們想看到全部有哪些地區呢? <br>
+                                在這邊我們可以看到地區的名稱變數是 SiteName<br>
+                                所以，所以，所以...
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+            <pre><code class="bash">
+$ jq '.[].SiteName' download.json
+            </code></pre>
+                    </div>
+                </div>   
+                <div class="row">
+                         <div class="col-lg-8">
+                                 <center>
+                                        <img width="90%" height="90%" src="2018-07-19/03.png" />
+                                 </center>
+                            </div>
+                </div>   <br> 
+                <div class="row">
+                     <div class="col-lg-12">
+                        <p class="lead">
+                                恩恩，看起來很簡單<br>
+                                那我們可不可以同時輸出地區（ SiteName ）、最大、最小降雨量（ TWD67Lon、TWD67Lat ）？
+                        </p>
+                    </div>
+                </div>     
+                <div class="row">
+                    <div class="col-lg-6">
+            <pre><code class="bash">
+$ jq '.[] | .SiteName , .TWD67Lon , .TWD67Lat' download.json
+            </code></pre>
+                    </div>
+                </div>   
+                <div class="row">
+                         <div class="col-lg-8">
+                                 <center>
+                                        <img width="90%" height="90%" src="2018-07-19/04.png" />
+                                 </center>
+                            </div>
+                </div>   <br>      
                 <!-- Page Contect End -->
             </div>
             <!-- /.container-fluid -->
