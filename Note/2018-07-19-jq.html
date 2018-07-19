@@ -303,8 +303,9 @@ $ jq '.[] | [ .SiteName , .TWD67Lon , .TWD67Lat ] | tostring '  download.json
                 <div class="row">
                      <div class="col-lg-12">
                         <p class="lead">
-                            不過這樣用，實在有點難看，之後要用 shell 處理覺得沒有很現眼<br>
-                            那我們分隔號可不可以用 " -- " ? 
+                            不過這樣多了 , 跟一些特殊字元，實在有點難看<br>
+                            之後想用 shell 例如 awk 之類的撈資料都讓人不太爽快<br>
+                            那我們分隔號可不可以改用 " -- " ? 
                         </p>
                     </div>
                 </div> 
